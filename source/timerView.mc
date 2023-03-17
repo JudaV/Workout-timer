@@ -22,14 +22,14 @@ class timerView extends WatchUi.DataField {
         countDown = 0;
         timerRunning = 0;
         targetHigh = 0;
-        targetLow = 0;a
+        targetLow = 0;
     }
     
     //  Anytime the size of obscurity of
     // the draw context is changed this will be called.
     function onLayout(dc as Dc) as Void {
         // Use the generic, centered layout
-        View.setLayout(Reza.Layouts.MainLayout(dc));
+        View.setLayout(Rez .Layouts.MainLayout(dc));
         var labelView = View.findDrawableById("label");
         labelView.locY = labelView.locY - 26;
         var valueView = View.findDrawableById("value");
@@ -43,10 +43,12 @@ class timerView extends WatchUi.DataField {
     // Note that compute() and onUpdate() are asynchronous, and there is no
     // guarantee that compute() will be called before onUpdate().
     function compute(info as Activity.Info) as Void {
-        // compute is called every second and used only here for the counter
+        // compute is called every second and used only here for the countdown timer
+        // backward countdown only if there a is fixed  duration of a lap / interval
         if (_dur > 0){
             countDown = (_dur - myCounter).abs();
         }
+        // else we count upwards
         else {
             countDown = myCounter;
         }
@@ -56,14 +58,14 @@ class timerView extends WatchUi.DataField {
     }
 
     // function for debugging only 
-    function getZones() {
-        
+    function getZones() {       
         var sport = UserProfile.getCurrentSport();
         var currentSport = sport.toString();
-        System.println("currentSport = " + currentSport); 
+        //  for sport-specific HR zones
+        System.println("currentSport is: " + currentSport); 
         var heartRateZones = UserProfile.getHeartRateZones(sport); 
         var indexZone = 0; 
-        while (indexZone <= 5) { 
+        while (indexZone < 6) { 
             System.println("heartRateZones[" + indexZone.toString() + "] = " + heartRateZones[indexZone].toString()); 
             indexZone += 1;
         } 
@@ -106,6 +108,7 @@ class timerView extends WatchUi.DataField {
                 else {
                     _dur = 0;
                 }
+                // power targets in workout .fit files are represented as power-in-watts + 1000
                 if (workoutStepInfo.step.targetValueHigh > 1000){
                     targetHigh = workoutStepInfo.step.targetValueHigh - 1000;
                 }
@@ -118,7 +121,7 @@ class timerView extends WatchUi.DataField {
                 if (workoutStepInfo.step.targetValueLow > 1000){
                     targetLow = workoutStepInfo.step.targetValueLow - 1000;
                 }
-                // it seems that  if target type = 7 workoutStepInfo.step.targetValueLow is used for 
+                // it seems that if target type = 7 workoutStepInfo.step.targetValueLow is used for 
                 // power zones but we can not reach this through the Toybox API.
                 else if (workoutStepInfo.step.targetValueLow > 10){
                     targetLow = workoutStepInfo.step.targetValueLow;
@@ -171,7 +174,7 @@ class timerView extends WatchUi.DataField {
     function onWorkoutStarted() as Void {
         _step = 1;
         myCounter = 0;
-        getZones();
+        //getZones(); leave out in production
         populateValues();
     }
 
@@ -182,6 +185,7 @@ class timerView extends WatchUi.DataField {
     }
     
     function secondsToTimeString(totSeconds) {
+        // format for countdown timer
         var hours = (totSeconds / 3600).toNumber();
         var minutes = ((totSeconds - hours * 3600) / 60).toNumber();
         var seconds = totSeconds - hours * 3600 - minutes * 60;
