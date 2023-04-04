@@ -17,3 +17,5 @@ Supported targets:
 ### Add it to your preferred screen
 
 Menu - Activity profile - Your Profile - Data Screens - Layout - choose one - Double-tap where you want to place this Workout Timer - In 'Select a Category' - Connect IQ - select Workout Timer.
+
+[Download](https://apps.garmin.com/en-US/apps/a698cfd3-c204-41b3-b9cb-446d558b4df1)
