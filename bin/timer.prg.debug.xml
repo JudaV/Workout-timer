@@ -23,159 +23,145 @@
         <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerApp.mc" id="10" lineNum="16" parent="globals/timerApp" pc="268435703" symbol="onStop"/>
         <entry filename="Rez.mc" id="11" lineNum="1" parent="globals/Rez" pc="268435706" symbol="&lt;init&gt;"/>
         <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="12" lineNum="7" parent="globals/timerView" pc="268435730" symbol="&lt;init&gt;"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="13" lineNum="94" parent="globals/timerView" pc="268435749" symbol="onTimerLap"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="13" lineNum="95" parent="globals/timerView" pc="268435751" symbol="onTimerLap"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="14" lineNum="181" parent="globals/timerView" pc="268435765" symbol="onWorkoutStepComplete"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="14" lineNum="182" parent="globals/timerView" pc="268435767" symbol="onWorkoutStepComplete"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="14" lineNum="183" parent="globals/timerView" pc="268435786" symbol="onWorkoutStepComplete"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="14" lineNum="184" parent="globals/timerView" pc="268435799" symbol="onWorkoutStepComplete"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="15" lineNum="98" parent="globals/timerView" pc="268435812" symbol="populateValues"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="15" lineNum="99" parent="globals/timerView" pc="268435816" symbol="populateValues"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="15" lineNum="100" parent="globals/timerView" pc="268435823" symbol="populateValues"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="15" lineNum="101" parent="globals/timerView" pc="268435838" symbol="populateValues"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="15" lineNum="102" parent="globals/timerView" pc="268435855" symbol="populateValues"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="15" lineNum="103" parent="globals/timerView" pc="268435889" symbol="populateValues"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="15" lineNum="104" parent="globals/timerView" pc="268435915" symbol="populateValues"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="15" lineNum="105" parent="globals/timerView" pc="268435926" symbol="populateValues"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="15" lineNum="106" parent="globals/timerView" pc="268435945" symbol="populateValues"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="15" lineNum="109" parent="globals/timerView" pc="268435970" symbol="populateValues"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="15" lineNum="112" parent="globals/timerView" pc="268435983" symbol="populateValues"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="15" lineNum="113" parent="globals/timerView" pc="268436006" symbol="populateValues"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="15" lineNum="115" parent="globals/timerView" pc="268436037" symbol="populateValues"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="15" lineNum="116" parent="globals/timerView" pc="268436060" symbol="populateValues"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="15" lineNum="119" parent="globals/timerView" pc="268436085" symbol="populateValues"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="15" lineNum="121" parent="globals/timerView" pc="268436098" symbol="populateValues"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="15" lineNum="122" parent="globals/timerView" pc="268436121" symbol="populateValues"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="15" lineNum="126" parent="globals/timerView" pc="268436152" symbol="populateValues"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="15" lineNum="127" parent="globals/timerView" pc="268436175" symbol="populateValues"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="15" lineNum="130" parent="globals/timerView" pc="268436200" symbol="populateValues"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="15" lineNum="136" parent="globals/timerView" pc="268436216" symbol="populateValues"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="15" lineNum="137" parent="globals/timerView" pc="268436235" symbol="populateValues"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="15" lineNum="140" parent="globals/timerView" pc="268436260" symbol="populateValues"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="15" lineNum="142" parent="globals/timerView" pc="268436273" symbol="populateValues"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="15" lineNum="143" parent="globals/timerView" pc="268436288" symbol="populateValues"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="15" lineNum="144" parent="globals/timerView" pc="268436305" symbol="populateValues"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="15" lineNum="145" parent="globals/timerView" pc="268436320" symbol="populateValues"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="15" lineNum="146" parent="globals/timerView" pc="268436339" symbol="populateValues"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="15" lineNum="147" parent="globals/timerView" pc="268436358" symbol="populateValues"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="15" lineNum="148" parent="globals/timerView" pc="268436374" symbol="populateValues"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="15" lineNum="149" parent="globals/timerView" pc="268436400" symbol="populateValues"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="15" lineNum="150" parent="globals/timerView" pc="268436425" symbol="populateValues"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="15" lineNum="151" parent="globals/timerView" pc="268436444" symbol="populateValues"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="15" lineNum="157" parent="globals/timerView" pc="268436469" symbol="populateValues"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="15" lineNum="158" parent="globals/timerView" pc="268436488" symbol="populateValues"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="15" lineNum="161" parent="globals/timerView" pc="268436513" symbol="populateValues"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="15" lineNum="163" parent="globals/timerView" pc="268436526" symbol="populateValues"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="15" lineNum="164" parent="globals/timerView" pc="268436545" symbol="populateValues"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="15" lineNum="167" parent="globals/timerView" pc="268436570" symbol="populateValues"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="16" lineNum="187" parent="globals/timerView" pc="268436587" symbol="secondsToTimeString"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="16" lineNum="189" parent="globals/timerView" pc="268436591" symbol="secondsToTimeString"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="16" lineNum="190" parent="globals/timerView" pc="268436610" symbol="secondsToTimeString"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="16" lineNum="191" parent="globals/timerView" pc="268436638" symbol="secondsToTimeString"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="16" lineNum="192" parent="globals/timerView" pc="268436660" symbol="secondsToTimeString"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="16" lineNum="197" parent="globals/timerView" pc="268436760" symbol="secondsToTimeString"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="17" lineNum="30" parent="globals/timerView" pc="268436763" symbol="onLayout"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="17" lineNum="32" parent="globals/timerView" pc="268436767" symbol="onLayout"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="17" lineNum="33" parent="globals/timerView" pc="268436818" symbol="onLayout"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="17" lineNum="34" parent="globals/timerView" pc="268436846" symbol="onLayout"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="17" lineNum="35" parent="globals/timerView" pc="268436868" symbol="onLayout"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="17" lineNum="36" parent="globals/timerView" pc="268436896" symbol="onLayout"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="17" lineNum="38" parent="globals/timerView" pc="268436918" symbol="onLayout"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="18" lineNum="74" parent="globals/timerView" pc="268436979" symbol="onTimerStart"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="18" lineNum="75" parent="globals/timerView" pc="268436981" symbol="onTimerStart"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="18" lineNum="76" parent="globals/timerView" pc="268436993" symbol="onTimerStart"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="19" lineNum="45" parent="globals/timerView" pc="268437007" symbol="compute"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="19" lineNum="48" parent="globals/timerView" pc="268437009" symbol="compute"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="19" lineNum="49" parent="globals/timerView" pc="268437026" symbol="compute"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="19" lineNum="53" parent="globals/timerView" pc="268437063" symbol="compute"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="19" lineNum="55" parent="globals/timerView" pc="268437079" symbol="compute"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="19" lineNum="56" parent="globals/timerView" pc="268437090" symbol="compute"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="20" lineNum="174" parent="globals/timerView" pc="268437113" symbol="onWorkoutStarted"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="20" lineNum="175" parent="globals/timerView" pc="268437115" symbol="onWorkoutStarted"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="20" lineNum="176" parent="globals/timerView" pc="268437128" symbol="onWorkoutStarted"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="20" lineNum="178" parent="globals/timerView" pc="268437141" symbol="onWorkoutStarted"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="21" lineNum="88" parent="globals/timerView" pc="268437154" symbol="onTimerResume"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="21" lineNum="89" parent="globals/timerView" pc="268437156" symbol="onTimerResume"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="21" lineNum="90" parent="globals/timerView" pc="268437168" symbol="onTimerResume"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="22" lineNum="61" parent="globals/timerView" pc="268437182" symbol="getZones"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="22" lineNum="62" parent="globals/timerView" pc="268437186" symbol="getZones"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="22" lineNum="63" parent="globals/timerView" pc="268437203" symbol="getZones"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="22" lineNum="65" parent="globals/timerView" pc="268437216" symbol="getZones"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="22" lineNum="66" parent="globals/timerView" pc="268437242" symbol="getZones"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="22" lineNum="67" parent="globals/timerView" pc="268437261" symbol="getZones"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="22" lineNum="68" parent="globals/timerView" pc="268437268" symbol="getZones"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="22" lineNum="69" parent="globals/timerView" pc="268437279" symbol="getZones"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="22" lineNum="70" parent="globals/timerView" pc="268437335" symbol="getZones"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="23" lineNum="84" parent="globals/timerView" pc="268437349" symbol="onTimerPause"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="23" lineNum="85" parent="globals/timerView" pc="268437351" symbol="onTimerPause"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="24" lineNum="17" parent="globals/timerView" pc="268437362" symbol="initialize"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="24" lineNum="18" parent="globals/timerView" pc="268437364" symbol="initialize"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="24" lineNum="19" parent="globals/timerView" pc="268437382" symbol="initialize"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="24" lineNum="20" parent="globals/timerView" pc="268437395" symbol="initialize"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="24" lineNum="21" parent="globals/timerView" pc="268437408" symbol="initialize"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="24" lineNum="22" parent="globals/timerView" pc="268437421" symbol="initialize"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="24" lineNum="23" parent="globals/timerView" pc="268437434" symbol="initialize"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="24" lineNum="24" parent="globals/timerView" pc="268437447" symbol="initialize"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="24" lineNum="25" parent="globals/timerView" pc="268437460" symbol="initialize"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="25" lineNum="201" parent="globals/timerView" pc="268437474" symbol="onUpdate"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="25" lineNum="204" parent="globals/timerView" pc="268437478" symbol="onUpdate"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="25" lineNum="207" parent="globals/timerView" pc="268437525" symbol="onUpdate"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="25" lineNum="208" parent="globals/timerView" pc="268437553" symbol="onUpdate"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="25" lineNum="209" parent="globals/timerView" pc="268437581" symbol="onUpdate"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="25" lineNum="210" parent="globals/timerView" pc="268437601" symbol="onUpdate"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="25" lineNum="211" parent="globals/timerView" pc="268437618" symbol="onUpdate"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="25" lineNum="214" parent="globals/timerView" pc="268437638" symbol="onUpdate"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="25" lineNum="215" parent="globals/timerView" pc="268437655" symbol="onUpdate"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="25" lineNum="218" parent="globals/timerView" pc="268437672" symbol="onUpdate"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="25" lineNum="219" parent="globals/timerView" pc="268437732" symbol="onUpdate"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="25" lineNum="220" parent="globals/timerView" pc="268437763" symbol="onUpdate"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="25" lineNum="221" parent="globals/timerView" pc="268437780" symbol="onUpdate"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="25" lineNum="224" parent="globals/timerView" pc="268437843" symbol="onUpdate"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="25" lineNum="227" parent="globals/timerView" pc="268437881" symbol="onUpdate"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="26" lineNum="80" parent="globals/timerView" pc="268437906" symbol="onTimerStop"/>
-        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="26" lineNum="81" parent="globals/timerView" pc="268437908" symbol="onTimerStop"/>
-        <entry filename="Rez.mc" id="27" lineNum="83" parent="globals/Rez/Layouts" pc="268437919" symbol="BottomRightLayout"/>
-        <entry filename="Rez.mc" id="27" lineNum="86" parent="globals/Rez/Layouts" pc="268437931" symbol="BottomRightLayout"/>
-        <entry filename="Rez.mc" id="27" lineNum="87" parent="globals/Rez/Layouts" pc="268437959" symbol="BottomRightLayout"/>
-        <entry filename="Rez.mc" id="27" lineNum="88" parent="globals/Rez/Layouts" pc="268438071" symbol="BottomRightLayout"/>
-        <entry filename="Rez.mc" id="27" lineNum="90" parent="globals/Rez/Layouts" pc="268438183" symbol="BottomRightLayout"/>
-        <entry filename="Rez.mc" id="28" lineNum="51" parent="globals/Rez/Layouts" pc="268438220" symbol="TopRightLayout"/>
-        <entry filename="Rez.mc" id="28" lineNum="54" parent="globals/Rez/Layouts" pc="268438232" symbol="TopRightLayout"/>
-        <entry filename="Rez.mc" id="28" lineNum="55" parent="globals/Rez/Layouts" pc="268438260" symbol="TopRightLayout"/>
-        <entry filename="Rez.mc" id="28" lineNum="56" parent="globals/Rez/Layouts" pc="268438372" symbol="TopRightLayout"/>
-        <entry filename="Rez.mc" id="28" lineNum="58" parent="globals/Rez/Layouts" pc="268438484" symbol="TopRightLayout"/>
-        <entry filename="Rez.mc" id="29" lineNum="67" parent="globals/Rez/Layouts" pc="268438521" symbol="BottomLeftLayout"/>
-        <entry filename="Rez.mc" id="29" lineNum="70" parent="globals/Rez/Layouts" pc="268438533" symbol="BottomLeftLayout"/>
-        <entry filename="Rez.mc" id="29" lineNum="71" parent="globals/Rez/Layouts" pc="268438561" symbol="BottomLeftLayout"/>
-        <entry filename="Rez.mc" id="29" lineNum="72" parent="globals/Rez/Layouts" pc="268438673" symbol="BottomLeftLayout"/>
-        <entry filename="Rez.mc" id="29" lineNum="74" parent="globals/Rez/Layouts" pc="268438785" symbol="BottomLeftLayout"/>
-        <entry filename="Rez.mc" id="30" lineNum="35" parent="globals/Rez/Layouts" pc="268438822" symbol="TopLeftLayout"/>
-        <entry filename="Rez.mc" id="30" lineNum="38" parent="globals/Rez/Layouts" pc="268438834" symbol="TopLeftLayout"/>
-        <entry filename="Rez.mc" id="30" lineNum="39" parent="globals/Rez/Layouts" pc="268438862" symbol="TopLeftLayout"/>
-        <entry filename="Rez.mc" id="30" lineNum="40" parent="globals/Rez/Layouts" pc="268438974" symbol="TopLeftLayout"/>
-        <entry filename="Rez.mc" id="30" lineNum="42" parent="globals/Rez/Layouts" pc="268439086" symbol="TopLeftLayout"/>
-        <entry filename="Rez.mc" id="31" lineNum="17" parent="globals/Rez/Layouts" pc="268439123" symbol="MainLayout"/>
-        <entry filename="Rez.mc" id="31" lineNum="19" parent="globals/Rez/Layouts" pc="268439135" symbol="MainLayout"/>
-        <entry filename="Rez.mc" id="31" lineNum="20" parent="globals/Rez/Layouts" pc="268439148" symbol="MainLayout"/>
-        <entry filename="Rez.mc" id="31" lineNum="22" parent="globals/Rez/Layouts" pc="268439161" symbol="MainLayout"/>
-        <entry filename="Rez.mc" id="31" lineNum="23" parent="globals/Rez/Layouts" pc="268439189" symbol="MainLayout"/>
-        <entry filename="Rez.mc" id="31" lineNum="24" parent="globals/Rez/Layouts" pc="268439324" symbol="MainLayout"/>
-        <entry filename="Rez.mc" id="31" lineNum="26" parent="globals/Rez/Layouts" pc="268439459" symbol="MainLayout"/>
+        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="13" lineNum="79" parent="globals/timerView" pc="268435749" symbol="onTimerLap"/>
+        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="13" lineNum="80" parent="globals/timerView" pc="268435751" symbol="onTimerLap"/>
+        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="14" lineNum="163" parent="globals/timerView" pc="268435765" symbol="onWorkoutStepComplete"/>
+        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="14" lineNum="164" parent="globals/timerView" pc="268435767" symbol="onWorkoutStepComplete"/>
+        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="14" lineNum="165" parent="globals/timerView" pc="268435780" symbol="onWorkoutStepComplete"/>
+        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="15" lineNum="83" parent="globals/timerView" pc="268435793" symbol="populateValues"/>
+        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="15" lineNum="84" parent="globals/timerView" pc="268435797" symbol="populateValues"/>
+        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="15" lineNum="85" parent="globals/timerView" pc="268435804" symbol="populateValues"/>
+        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="15" lineNum="86" parent="globals/timerView" pc="268435819" symbol="populateValues"/>
+        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="15" lineNum="87" parent="globals/timerView" pc="268435836" symbol="populateValues"/>
+        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="15" lineNum="88" parent="globals/timerView" pc="268435870" symbol="populateValues"/>
+        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="15" lineNum="89" parent="globals/timerView" pc="268435881" symbol="populateValues"/>
+        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="15" lineNum="90" parent="globals/timerView" pc="268435900" symbol="populateValues"/>
+        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="15" lineNum="93" parent="globals/timerView" pc="268435925" symbol="populateValues"/>
+        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="15" lineNum="96" parent="globals/timerView" pc="268435938" symbol="populateValues"/>
+        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="15" lineNum="97" parent="globals/timerView" pc="268435961" symbol="populateValues"/>
+        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="15" lineNum="99" parent="globals/timerView" pc="268435992" symbol="populateValues"/>
+        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="15" lineNum="100" parent="globals/timerView" pc="268436015" symbol="populateValues"/>
+        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="15" lineNum="103" parent="globals/timerView" pc="268436040" symbol="populateValues"/>
+        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="15" lineNum="105" parent="globals/timerView" pc="268436053" symbol="populateValues"/>
+        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="15" lineNum="106" parent="globals/timerView" pc="268436076" symbol="populateValues"/>
+        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="15" lineNum="110" parent="globals/timerView" pc="268436107" symbol="populateValues"/>
+        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="15" lineNum="111" parent="globals/timerView" pc="268436130" symbol="populateValues"/>
+        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="15" lineNum="114" parent="globals/timerView" pc="268436155" symbol="populateValues"/>
+        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="15" lineNum="120" parent="globals/timerView" pc="268436171" symbol="populateValues"/>
+        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="15" lineNum="121" parent="globals/timerView" pc="268436190" symbol="populateValues"/>
+        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="15" lineNum="124" parent="globals/timerView" pc="268436215" symbol="populateValues"/>
+        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="15" lineNum="126" parent="globals/timerView" pc="268436228" symbol="populateValues"/>
+        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="15" lineNum="127" parent="globals/timerView" pc="268436243" symbol="populateValues"/>
+        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="15" lineNum="128" parent="globals/timerView" pc="268436260" symbol="populateValues"/>
+        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="15" lineNum="129" parent="globals/timerView" pc="268436275" symbol="populateValues"/>
+        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="15" lineNum="130" parent="globals/timerView" pc="268436294" symbol="populateValues"/>
+        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="15" lineNum="131" parent="globals/timerView" pc="268436313" symbol="populateValues"/>
+        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="15" lineNum="132" parent="globals/timerView" pc="268436329" symbol="populateValues"/>
+        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="15" lineNum="133" parent="globals/timerView" pc="268436354" symbol="populateValues"/>
+        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="15" lineNum="134" parent="globals/timerView" pc="268436373" symbol="populateValues"/>
+        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="15" lineNum="140" parent="globals/timerView" pc="268436398" symbol="populateValues"/>
+        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="15" lineNum="141" parent="globals/timerView" pc="268436417" symbol="populateValues"/>
+        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="15" lineNum="144" parent="globals/timerView" pc="268436442" symbol="populateValues"/>
+        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="15" lineNum="146" parent="globals/timerView" pc="268436455" symbol="populateValues"/>
+        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="15" lineNum="147" parent="globals/timerView" pc="268436474" symbol="populateValues"/>
+        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="15" lineNum="150" parent="globals/timerView" pc="268436499" symbol="populateValues"/>
+        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="16" lineNum="168" parent="globals/timerView" pc="268436516" symbol="secondsToTimeString"/>
+        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="16" lineNum="170" parent="globals/timerView" pc="268436520" symbol="secondsToTimeString"/>
+        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="16" lineNum="171" parent="globals/timerView" pc="268436539" symbol="secondsToTimeString"/>
+        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="16" lineNum="172" parent="globals/timerView" pc="268436567" symbol="secondsToTimeString"/>
+        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="16" lineNum="173" parent="globals/timerView" pc="268436589" symbol="secondsToTimeString"/>
+        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="16" lineNum="178" parent="globals/timerView" pc="268436689" symbol="secondsToTimeString"/>
+        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="17" lineNum="28" parent="globals/timerView" pc="268436692" symbol="onLayout"/>
+        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="17" lineNum="30" parent="globals/timerView" pc="268436696" symbol="onLayout"/>
+        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="17" lineNum="31" parent="globals/timerView" pc="268436747" symbol="onLayout"/>
+        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="17" lineNum="32" parent="globals/timerView" pc="268436775" symbol="onLayout"/>
+        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="17" lineNum="33" parent="globals/timerView" pc="268436797" symbol="onLayout"/>
+        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="17" lineNum="34" parent="globals/timerView" pc="268436825" symbol="onLayout"/>
+        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="17" lineNum="36" parent="globals/timerView" pc="268436847" symbol="onLayout"/>
+        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="18" lineNum="59" parent="globals/timerView" pc="268436908" symbol="onTimerStart"/>
+        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="18" lineNum="60" parent="globals/timerView" pc="268436910" symbol="onTimerStart"/>
+        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="18" lineNum="61" parent="globals/timerView" pc="268436922" symbol="onTimerStart"/>
+        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="19" lineNum="43" parent="globals/timerView" pc="268436936" symbol="compute"/>
+        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="19" lineNum="46" parent="globals/timerView" pc="268436938" symbol="compute"/>
+        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="19" lineNum="47" parent="globals/timerView" pc="268436955" symbol="compute"/>
+        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="19" lineNum="51" parent="globals/timerView" pc="268436992" symbol="compute"/>
+        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="19" lineNum="53" parent="globals/timerView" pc="268437008" symbol="compute"/>
+        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="19" lineNum="54" parent="globals/timerView" pc="268437019" symbol="compute"/>
+        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="20" lineNum="157" parent="globals/timerView" pc="268437042" symbol="onWorkoutStarted"/>
+        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="20" lineNum="158" parent="globals/timerView" pc="268437044" symbol="onWorkoutStarted"/>
+        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="20" lineNum="160" parent="globals/timerView" pc="268437057" symbol="onWorkoutStarted"/>
+        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="21" lineNum="73" parent="globals/timerView" pc="268437070" symbol="onTimerResume"/>
+        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="21" lineNum="74" parent="globals/timerView" pc="268437072" symbol="onTimerResume"/>
+        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="21" lineNum="75" parent="globals/timerView" pc="268437084" symbol="onTimerResume"/>
+        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="22" lineNum="69" parent="globals/timerView" pc="268437098" symbol="onTimerPause"/>
+        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="22" lineNum="70" parent="globals/timerView" pc="268437100" symbol="onTimerPause"/>
+        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="23" lineNum="16" parent="globals/timerView" pc="268437111" symbol="initialize"/>
+        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="23" lineNum="17" parent="globals/timerView" pc="268437113" symbol="initialize"/>
+        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="23" lineNum="18" parent="globals/timerView" pc="268437131" symbol="initialize"/>
+        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="23" lineNum="19" parent="globals/timerView" pc="268437144" symbol="initialize"/>
+        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="23" lineNum="20" parent="globals/timerView" pc="268437157" symbol="initialize"/>
+        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="23" lineNum="21" parent="globals/timerView" pc="268437170" symbol="initialize"/>
+        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="23" lineNum="22" parent="globals/timerView" pc="268437183" symbol="initialize"/>
+        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="23" lineNum="23" parent="globals/timerView" pc="268437196" symbol="initialize"/>
+        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="24" lineNum="182" parent="globals/timerView" pc="268437210" symbol="onUpdate"/>
+        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="24" lineNum="185" parent="globals/timerView" pc="268437214" symbol="onUpdate"/>
+        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="24" lineNum="188" parent="globals/timerView" pc="268437261" symbol="onUpdate"/>
+        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="24" lineNum="189" parent="globals/timerView" pc="268437289" symbol="onUpdate"/>
+        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="24" lineNum="190" parent="globals/timerView" pc="268437317" symbol="onUpdate"/>
+        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="24" lineNum="191" parent="globals/timerView" pc="268437337" symbol="onUpdate"/>
+        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="24" lineNum="192" parent="globals/timerView" pc="268437354" symbol="onUpdate"/>
+        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="24" lineNum="195" parent="globals/timerView" pc="268437374" symbol="onUpdate"/>
+        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="24" lineNum="196" parent="globals/timerView" pc="268437391" symbol="onUpdate"/>
+        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="24" lineNum="199" parent="globals/timerView" pc="268437408" symbol="onUpdate"/>
+        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="24" lineNum="200" parent="globals/timerView" pc="268437468" symbol="onUpdate"/>
+        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="24" lineNum="201" parent="globals/timerView" pc="268437499" symbol="onUpdate"/>
+        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="24" lineNum="202" parent="globals/timerView" pc="268437516" symbol="onUpdate"/>
+        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="24" lineNum="205" parent="globals/timerView" pc="268437579" symbol="onUpdate"/>
+        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="24" lineNum="208" parent="globals/timerView" pc="268437617" symbol="onUpdate"/>
+        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="25" lineNum="65" parent="globals/timerView" pc="268437642" symbol="onTimerStop"/>
+        <entry filename="/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" id="25" lineNum="66" parent="globals/timerView" pc="268437644" symbol="onTimerStop"/>
+        <entry filename="Rez.mc" id="26" lineNum="83" parent="globals/Rez/Layouts" pc="268437655" symbol="BottomRightLayout"/>
+        <entry filename="Rez.mc" id="26" lineNum="86" parent="globals/Rez/Layouts" pc="268437667" symbol="BottomRightLayout"/>
+        <entry filename="Rez.mc" id="26" lineNum="87" parent="globals/Rez/Layouts" pc="268437695" symbol="BottomRightLayout"/>
+        <entry filename="Rez.mc" id="26" lineNum="88" parent="globals/Rez/Layouts" pc="268437807" symbol="BottomRightLayout"/>
+        <entry filename="Rez.mc" id="26" lineNum="90" parent="globals/Rez/Layouts" pc="268437919" symbol="BottomRightLayout"/>
+        <entry filename="Rez.mc" id="27" lineNum="51" parent="globals/Rez/Layouts" pc="268437956" symbol="TopRightLayout"/>
+        <entry filename="Rez.mc" id="27" lineNum="54" parent="globals/Rez/Layouts" pc="268437968" symbol="TopRightLayout"/>
+        <entry filename="Rez.mc" id="27" lineNum="55" parent="globals/Rez/Layouts" pc="268437996" symbol="TopRightLayout"/>
+        <entry filename="Rez.mc" id="27" lineNum="56" parent="globals/Rez/Layouts" pc="268438108" symbol="TopRightLayout"/>
+        <entry filename="Rez.mc" id="27" lineNum="58" parent="globals/Rez/Layouts" pc="268438220" symbol="TopRightLayout"/>
+        <entry filename="Rez.mc" id="28" lineNum="67" parent="globals/Rez/Layouts" pc="268438257" symbol="BottomLeftLayout"/>
+        <entry filename="Rez.mc" id="28" lineNum="70" parent="globals/Rez/Layouts" pc="268438269" symbol="BottomLeftLayout"/>
+        <entry filename="Rez.mc" id="28" lineNum="71" parent="globals/Rez/Layouts" pc="268438297" symbol="BottomLeftLayout"/>
+        <entry filename="Rez.mc" id="28" lineNum="72" parent="globals/Rez/Layouts" pc="268438409" symbol="BottomLeftLayout"/>
+        <entry filename="Rez.mc" id="28" lineNum="74" parent="globals/Rez/Layouts" pc="268438521" symbol="BottomLeftLayout"/>
+        <entry filename="Rez.mc" id="29" lineNum="35" parent="globals/Rez/Layouts" pc="268438558" symbol="TopLeftLayout"/>
+        <entry filename="Rez.mc" id="29" lineNum="38" parent="globals/Rez/Layouts" pc="268438570" symbol="TopLeftLayout"/>
+        <entry filename="Rez.mc" id="29" lineNum="39" parent="globals/Rez/Layouts" pc="268438598" symbol="TopLeftLayout"/>
+        <entry filename="Rez.mc" id="29" lineNum="40" parent="globals/Rez/Layouts" pc="268438710" symbol="TopLeftLayout"/>
+        <entry filename="Rez.mc" id="29" lineNum="42" parent="globals/Rez/Layouts" pc="268438822" symbol="TopLeftLayout"/>
+        <entry filename="Rez.mc" id="30" lineNum="17" parent="globals/Rez/Layouts" pc="268438859" symbol="MainLayout"/>
+        <entry filename="Rez.mc" id="30" lineNum="19" parent="globals/Rez/Layouts" pc="268438871" symbol="MainLayout"/>
+        <entry filename="Rez.mc" id="30" lineNum="20" parent="globals/Rez/Layouts" pc="268438884" symbol="MainLayout"/>
+        <entry filename="Rez.mc" id="30" lineNum="22" parent="globals/Rez/Layouts" pc="268438897" symbol="MainLayout"/>
+        <entry filename="Rez.mc" id="30" lineNum="23" parent="globals/Rez/Layouts" pc="268438925" symbol="MainLayout"/>
+        <entry filename="Rez.mc" id="30" lineNum="24" parent="globals/Rez/Layouts" pc="268439060" symbol="MainLayout"/>
+        <entry filename="Rez.mc" id="30" lineNum="26" parent="globals/Rez/Layouts" pc="268439195" symbol="MainLayout"/>
     </pcToLineNum>
     <symbolTable>
         <entry id="8388639" module="true" symbol="Graphics"/>
         <entry field="true" id="13" symbol="_dur"/>
         <entry id="8388632" method="true" symbol="&lt;init&gt;"/>
         <entry id="7" module="true" symbol="globals/Rez/Menus"/>
-        <entry id="26" method="true" symbol="MainLayout"/>
+        <entry id="24" method="true" symbol="MainLayout"/>
         <entry id="8391698" method="true" symbol="onWorkoutStarted"/>
-        <entry id="18" method="true" symbol="populateValues"/>
+        <entry id="16" method="true" symbol="populateValues"/>
         <entry id="8389748" method="true" symbol="onTimerStop"/>
         <entry id="8391576" method="true" symbol="getCurrentWorkoutStep"/>
         <entry id="8388647" module="true" symbol="UserProfile"/>
         <entry field="true" id="8388611" module="true" symbol="Toybox"/>
         <entry id="8389747" method="true" symbol="onTimerStart"/>
-        <entry field="true" id="29" symbol="AppName"/>
+        <entry field="true" id="27" symbol="AppName"/>
         <entry id="8389749" method="true" symbol="onTimerPause"/>
         <entry id="8" module="true" symbol="globals/Rez/Strings"/>
         <entry id="8388772" module="true" object="true" symbol="Fonts"/>
@@ -192,34 +178,32 @@
         <entry id="8389275" method="true" symbol="getApp"/>
         <entry id="6" module="true" symbol="globals/Rez/Layouts"/>
         <entry id="9" object="true" symbol="timerApp"/>
-        <entry field="true" id="15" symbol="countDown"/>
+        <entry field="true" id="14" symbol="countDown"/>
         <entry id="8389122" method="true" symbol="onLayout"/>
         <entry field="true" id="8389063" symbol="identifier"/>
         <entry id="8389349" symbol="justification"/>
-        <entry id="19" method="true" symbol="secondsToTimeString"/>
+        <entry id="17" method="true" symbol="secondsToTimeString"/>
         <entry id="8389137" method="true" symbol="compute"/>
-        <entry field="true" id="22" symbol="timerRunning"/>
+        <entry field="true" id="20" symbol="timerRunning"/>
         <entry id="8389131" method="true" symbol="setColor"/>
         <entry id="5" module="true" symbol="globals/Rez/JsonData"/>
         <entry id="8389758" method="true" symbol="getCurrentSport"/>
         <entry id="8390685" method="true" symbol="onWorkoutStepComplete"/>
         <entry id="3" module="true" symbol="globals/Rez/Drawables"/>
-        <entry field="true" id="14" symbol="_step"/>
-        <entry id="27" method="true" symbol="TopLeftLayout"/>
+        <entry id="25" method="true" symbol="TopLeftLayout"/>
         <entry id="8388769" module="true" object="true" symbol="Rez"/>
-        <entry id="24" method="true" symbol="BottomLeftLayout"/>
-        <entry id="25" method="true" symbol="BottomRightLayout"/>
+        <entry id="22" method="true" symbol="BottomLeftLayout"/>
+        <entry id="23" method="true" symbol="BottomRightLayout"/>
         <entry id="8388640" module="true" symbol="Lang"/>
         <entry id="8390088" module="true" object="true" symbol="JsonData"/>
         <entry field="true" id="8389130" symbol="mColor"/>
         <entry id="8389068" method="true" symbol="draw"/>
-        <entry field="true" id="23" symbol="LauncherIcon"/>
+        <entry field="true" id="21" symbol="LauncherIcon"/>
         <entry id="8388610" symbol="statics"/>
-        <entry id="16" method="true" symbol="getZones"/>
         <entry id="8389350" module="true" symbol="globals"/>
         <entry id="8388770" module="true" object="true" symbol="Strings"/>
         <entry id="8390146" module="true" object="true" symbol="Background"/>
-        <entry field="true" id="17" symbol="myCounter"/>
+        <entry field="true" id="15" symbol="myCounter"/>
         <entry id="8388702" method="true" symbol="initialize"/>
         <entry id="10" object="true" symbol="timerView"/>
         <entry id="8389279" method="true" symbol="onStart"/>
@@ -227,63 +211,59 @@
         <entry id="8389280" method="true" symbol="getInitialView"/>
         <entry id="8389281" method="true" symbol="onStop"/>
         <entry id="8389347" symbol="color"/>
-        <entry field="true" id="21" symbol="targetLow"/>
+        <entry field="true" id="19" symbol="targetLow"/>
         <entry id="11" module="true" symbol="Layouts"/>
         <entry id="8389750" method="true" symbol="onTimerResume"/>
         <entry id="4" module="true" symbol="globals/Rez/Fonts"/>
         <entry id="8389757" method="true" symbol="getHeartRateZones"/>
         <entry id="8388635" module="true" symbol="Application"/>
-        <entry id="28" method="true" symbol="TopRightLayout"/>
-        <entry field="true" id="20" symbol="targetHigh"/>
+        <entry id="26" method="true" symbol="TopRightLayout"/>
+        <entry field="true" id="18" symbol="targetHigh"/>
     </symbolTable>
     <localVars>
         <entry arg="true" endPc="268435517" name="color" stackId="1" startPc="268435505"/>
         <entry endPc="268435575" name="dictionary" stackId="1" startPc="268435522"/>
         <entry arg="true" endPc="268435616" name="dc" stackId="1" startPc="268435577"/>
-        <entry endPc="268436585" name="low" stackId="1" startPc="268435816"/>
-        <entry endPc="268436582" name="workoutStepInfo" stackId="2" startPc="268435838"/>
-        <entry endPc="268436582" name="type" stackId="3" startPc="268435838"/>
-        <entry endPc="268436465" name="sport" stackId="4" startPc="268436288"/>
-        <entry endPc="268436462" name="heartRateZones" stackId="5" startPc="268436320"/>
-        <entry arg="true" endPc="268436762" name="totSeconds" stackId="1" startPc="268436587"/>
-        <entry endPc="268436762" name="hours" stackId="2" startPc="268436591"/>
-        <entry endPc="268436762" name="minutes" stackId="3" startPc="268436591"/>
-        <entry endPc="268436762" name="seconds" stackId="4" startPc="268436591"/>
-        <entry endPc="268436762" name="timeString" stackId="5" startPc="268436591"/>
-        <entry arg="true" endPc="268436978" name="dc" stackId="1" startPc="268436763"/>
-        <entry endPc="268436977" name="labelView" stackId="2" startPc="268436767"/>
-        <entry endPc="268436977" name="valueView" stackId="3" startPc="268436767"/>
-        <entry arg="true" endPc="268437112" name="info" stackId="1" startPc="268437007"/>
-        <entry endPc="268437347" name="sport" stackId="1" startPc="268437186"/>
-        <entry endPc="268437347" name="currentSport" stackId="2" startPc="268437186"/>
-        <entry endPc="268437347" name="heartRateZones" stackId="3" startPc="268437186"/>
-        <entry endPc="268437347" name="indexZone" stackId="4" startPc="268437186"/>
-        <entry arg="true" endPc="268437905" name="dc" stackId="1" startPc="268437474"/>
-        <entry endPc="268437904" name="value" stackId="2" startPc="268437478"/>
-        <entry endPc="268437904" name="label" stackId="3" startPc="268437478"/>
-        <entry endPc="268437904" name="highLowString" stackId="4" startPc="268437478"/>
-        <entry arg="true" endPc="268438219" name="dc" stackId="1" startPc="268437919"/>
-        <entry endPc="268438219" name="rez_cmp_local_custom_drawable_24745035191031088011" stackId="2" startPc="268437931"/>
-        <entry endPc="268438219" name="rez_cmp_local_text_label" stackId="3" startPc="268437931"/>
-        <entry endPc="268438219" name="rez_cmp_local_text_value" stackId="4" startPc="268437931"/>
-        <entry arg="true" endPc="268438520" name="dc" stackId="1" startPc="268438220"/>
-        <entry endPc="268438520" name="rez_cmp_local_custom_drawable_83087959865153113244" stackId="2" startPc="268438232"/>
-        <entry endPc="268438520" name="rez_cmp_local_text_label" stackId="3" startPc="268438232"/>
-        <entry endPc="268438520" name="rez_cmp_local_text_value" stackId="4" startPc="268438232"/>
-        <entry arg="true" endPc="268438821" name="dc" stackId="1" startPc="268438521"/>
-        <entry endPc="268438821" name="rez_cmp_local_custom_drawable_11637112221309884694" stackId="2" startPc="268438533"/>
-        <entry endPc="268438821" name="rez_cmp_local_text_label" stackId="3" startPc="268438533"/>
-        <entry endPc="268438821" name="rez_cmp_local_text_value" stackId="4" startPc="268438533"/>
-        <entry arg="true" endPc="268439122" name="dc" stackId="1" startPc="268438822"/>
-        <entry endPc="268439122" name="rez_cmp_local_custom_drawable_82395639812239035568" stackId="2" startPc="268438834"/>
-        <entry endPc="268439122" name="rez_cmp_local_text_label" stackId="3" startPc="268438834"/>
-        <entry endPc="268439122" name="rez_cmp_local_text_value" stackId="4" startPc="268438834"/>
-        <entry arg="true" endPc="268439495" name="dc" stackId="1" startPc="268439123"/>
-        <entry endPc="268439495" name="rez_cmp_local_var_dc_getHeight" stackId="2" startPc="268439135"/>
-        <entry endPc="268439495" name="rez_cmp_local_var_dc_getWidth" stackId="3" startPc="268439135"/>
-        <entry endPc="268439495" name="rez_cmp_local_custom_drawable_14893874139879328811" stackId="4" startPc="268439135"/>
-        <entry endPc="268439495" name="rez_cmp_local_text_label" stackId="5" startPc="268439135"/>
-        <entry endPc="268439495" name="rez_cmp_local_text_value" stackId="6" startPc="268439135"/>
+        <entry endPc="268436514" name="low" stackId="1" startPc="268435797"/>
+        <entry endPc="268436511" name="workoutStepInfo" stackId="2" startPc="268435819"/>
+        <entry endPc="268436511" name="type" stackId="3" startPc="268435819"/>
+        <entry endPc="268436394" name="sport" stackId="4" startPc="268436243"/>
+        <entry endPc="268436391" name="heartRateZones" stackId="5" startPc="268436275"/>
+        <entry arg="true" endPc="268436691" name="totSeconds" stackId="1" startPc="268436516"/>
+        <entry endPc="268436691" name="hours" stackId="2" startPc="268436520"/>
+        <entry endPc="268436691" name="minutes" stackId="3" startPc="268436520"/>
+        <entry endPc="268436691" name="seconds" stackId="4" startPc="268436520"/>
+        <entry endPc="268436691" name="timeString" stackId="5" startPc="268436520"/>
+        <entry arg="true" endPc="268436907" name="dc" stackId="1" startPc="268436692"/>
+        <entry endPc="268436906" name="labelView" stackId="2" startPc="268436696"/>
+        <entry endPc="268436906" name="valueView" stackId="3" startPc="268436696"/>
+        <entry arg="true" endPc="268437041" name="info" stackId="1" startPc="268436936"/>
+        <entry arg="true" endPc="268437641" name="dc" stackId="1" startPc="268437210"/>
+        <entry endPc="268437640" name="value" stackId="2" startPc="268437214"/>
+        <entry endPc="268437640" name="label" stackId="3" startPc="268437214"/>
+        <entry endPc="268437640" name="highLowString" stackId="4" startPc="268437214"/>
+        <entry arg="true" endPc="268437955" name="dc" stackId="1" startPc="268437655"/>
+        <entry endPc="268437955" name="rez_cmp_local_custom_drawable_49723412414060311113" stackId="2" startPc="268437667"/>
+        <entry endPc="268437955" name="rez_cmp_local_text_label" stackId="3" startPc="268437667"/>
+        <entry endPc="268437955" name="rez_cmp_local_text_value" stackId="4" startPc="268437667"/>
+        <entry arg="true" endPc="268438256" name="dc" stackId="1" startPc="268437956"/>
+        <entry endPc="268438256" name="rez_cmp_local_custom_drawable_91522429082866926140" stackId="2" startPc="268437968"/>
+        <entry endPc="268438256" name="rez_cmp_local_text_label" stackId="3" startPc="268437968"/>
+        <entry endPc="268438256" name="rez_cmp_local_text_value" stackId="4" startPc="268437968"/>
+        <entry arg="true" endPc="268438557" name="dc" stackId="1" startPc="268438257"/>
+        <entry endPc="268438557" name="rez_cmp_local_custom_drawable_12261878112078663025" stackId="2" startPc="268438269"/>
+        <entry endPc="268438557" name="rez_cmp_local_text_label" stackId="3" startPc="268438269"/>
+        <entry endPc="268438557" name="rez_cmp_local_text_value" stackId="4" startPc="268438269"/>
+        <entry arg="true" endPc="268438858" name="dc" stackId="1" startPc="268438558"/>
+        <entry endPc="268438858" name="rez_cmp_local_custom_drawable_10480237117465136340" stackId="2" startPc="268438570"/>
+        <entry endPc="268438858" name="rez_cmp_local_text_label" stackId="3" startPc="268438570"/>
+        <entry endPc="268438858" name="rez_cmp_local_text_value" stackId="4" startPc="268438570"/>
+        <entry arg="true" endPc="268439231" name="dc" stackId="1" startPc="268438859"/>
+        <entry endPc="268439231" name="rez_cmp_local_var_dc_getHeight" stackId="2" startPc="268438871"/>
+        <entry endPc="268439231" name="rez_cmp_local_var_dc_getWidth" stackId="3" startPc="268438871"/>
+        <entry endPc="268439231" name="rez_cmp_local_custom_drawable_10121573631033804521" stackId="4" startPc="268438871"/>
+        <entry endPc="268439231" name="rez_cmp_local_text_label" stackId="5" startPc="268438871"/>
+        <entry endPc="268439231" name="rez_cmp_local_text_value" stackId="6" startPc="268438871"/>
     </localVars>
     <annotations>
         <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="LauncherIcon"/>
@@ -296,12 +276,12 @@
         <dataEntry label="globals/timerApp" offset="237" parentId="globals" symbolId="timerApp" type="class"/>
         <dataEntry label="globals/Rez" offset="308" parentId="globals" symbolId="Rez" type="module"/>
         <dataEntry label="globals/timerView" offset="387" parentId="globals" symbolId="timerView" type="class"/>
-        <dataEntry label="globals/Rez/Drawables" offset="594" parentId="Rez" symbolId="Drawables" type="module"/>
-        <dataEntry label="globals/Rez/Layouts" offset="633" parentId="Rez" symbolId="Layouts" type="module"/>
-        <dataEntry label="globals/Rez/Menus" offset="704" parentId="Rez" symbolId="Menus" type="module"/>
-        <dataEntry label="globals/Rez/Fonts" offset="735" parentId="Rez" symbolId="Fonts" type="module"/>
-        <dataEntry label="globals/Rez/Strings" offset="766" parentId="Rez" symbolId="Strings" type="module"/>
-        <dataEntry label="globals/Rez/JsonData" offset="813" parentId="Rez" symbolId="JsonData" type="module"/>
+        <dataEntry label="globals/Rez/Drawables" offset="578" parentId="Rez" symbolId="Drawables" type="module"/>
+        <dataEntry label="globals/Rez/Layouts" offset="617" parentId="Rez" symbolId="Layouts" type="module"/>
+        <dataEntry label="globals/Rez/Menus" offset="688" parentId="Rez" symbolId="Menus" type="module"/>
+        <dataEntry label="globals/Rez/Fonts" offset="719" parentId="Rez" symbolId="Fonts" type="module"/>
+        <dataEntry label="globals/Rez/Strings" offset="750" parentId="Rez" symbolId="Strings" type="module"/>
+        <dataEntry label="globals/Rez/JsonData" offset="797" parentId="Rez" symbolId="JsonData" type="module"/>
     </dataEntryOffsetMappings>
     <functions>
         <functionEntry accessMode="public" endPc="268435485" name="getApp" startPc="268435460">
@@ -347,47 +327,44 @@
         <functionEntry accessMode="public" endPc="268435764" name="onTimerLap" parent="timerView" startPc="268435749">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268435811" name="onWorkoutStepComplete" parent="timerView" startPc="268435765">
+        <functionEntry accessMode="public" endPc="268435792" name="onWorkoutStepComplete" parent="timerView" startPc="268435765">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268436586" name="populateValues" parent="timerView" startPc="268435812">
+        <functionEntry accessMode="public" endPc="268436515" name="populateValues" parent="timerView" startPc="268435793">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268436762" name="secondsToTimeString" parent="timerView" startPc="268436587">
+        <functionEntry accessMode="public" endPc="268436691" name="secondsToTimeString" parent="timerView" startPc="268436516">
             <param id="totSeconds"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268436978" name="onLayout" parent="timerView" startPc="268436763">
+        <functionEntry accessMode="public" endPc="268436907" name="onLayout" parent="timerView" startPc="268436692">
             <param id="dc"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268437006" name="onTimerStart" parent="timerView" startPc="268436979">
+        <functionEntry accessMode="public" endPc="268436935" name="onTimerStart" parent="timerView" startPc="268436908">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268437112" name="compute" parent="timerView" startPc="268437007">
+        <functionEntry accessMode="public" endPc="268437041" name="compute" parent="timerView" startPc="268436936">
             <param id="info"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268437153" name="onWorkoutStarted" parent="timerView" startPc="268437113">
+        <functionEntry accessMode="public" endPc="268437069" name="onWorkoutStarted" parent="timerView" startPc="268437042">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268437181" name="onTimerResume" parent="timerView" startPc="268437154">
+        <functionEntry accessMode="public" endPc="268437097" name="onTimerResume" parent="timerView" startPc="268437070">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268437348" name="getZones" parent="timerView" startPc="268437182">
+        <functionEntry accessMode="public" endPc="268437110" name="onTimerPause" parent="timerView" startPc="268437098">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268437361" name="onTimerPause" parent="timerView" startPc="268437349">
+        <functionEntry accessMode="public" endPc="268437209" name="initialize" parent="timerView" startPc="268437111">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268437473" name="initialize" parent="timerView" startPc="268437362">
-            <documentation/>
-        </functionEntry>
-        <functionEntry accessMode="public" endPc="268437905" name="onUpdate" parent="timerView" startPc="268437474">
+        <functionEntry accessMode="public" endPc="268437641" name="onUpdate" parent="timerView" startPc="268437210">
             <param id="dc"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268437918" name="onTimerStop" parent="timerView" startPc="268437906">
+        <functionEntry accessMode="public" endPc="268437654" name="onTimerStop" parent="timerView" startPc="268437642">
             <documentation/>
         </functionEntry>
         <functionEntry accessMode="public" name="&lt;init&gt;" parent="Drawables">
@@ -408,23 +385,23 @@
         <functionEntry accessMode="public" name="&lt;init&gt;" parent="JsonData">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268438219" name="BottomRightLayout" parent="Layouts" startPc="268437919">
+        <functionEntry accessMode="public" endPc="268437955" name="BottomRightLayout" parent="Layouts" startPc="268437655">
             <param id="dc"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268438520" name="TopRightLayout" parent="Layouts" startPc="268438220">
+        <functionEntry accessMode="public" endPc="268438256" name="TopRightLayout" parent="Layouts" startPc="268437956">
             <param id="dc"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268438821" name="BottomLeftLayout" parent="Layouts" startPc="268438521">
+        <functionEntry accessMode="public" endPc="268438557" name="BottomLeftLayout" parent="Layouts" startPc="268438257">
             <param id="dc"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268439122" name="TopLeftLayout" parent="Layouts" startPc="268438822">
+        <functionEntry accessMode="public" endPc="268438858" name="TopLeftLayout" parent="Layouts" startPc="268438558">
             <param id="dc"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268439495" name="MainLayout" parent="Layouts" startPc="268439123">
+        <functionEntry accessMode="public" endPc="268439231" name="MainLayout" parent="Layouts" startPc="268438859">
             <param id="dc"/>
             <documentation/>
         </functionEntry>
