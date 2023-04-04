@@ -7,7 +7,6 @@ import Toybox.UserProfile;
 class timerView extends WatchUi.DataField {
 
     hidden var _dur;
-    hidden var _step;
     hidden var myCounter;
     hidden var countDown;
     hidden var timerRunning; 
@@ -16,7 +15,6 @@ class timerView extends WatchUi.DataField {
     
     function initialize() {
         DataField.initialize();
-        _step = 0;
         _dur = 0;
         myCounter = 0;
         countDown = 0;
@@ -31,9 +29,9 @@ class timerView extends WatchUi.DataField {
         // Use the generic, centered layout
         View.setLayout(Rez .Layouts.MainLayout(dc));
         var labelView = View.findDrawableById("label");
-        labelView.locY = labelView.locY - 26;
+        labelView.locY = labelView.locY - 20;
         var valueView = View.findDrawableById("value");
-        valueView.locY = valueView.locY + 7;
+        valueView.locY = valueView.locY + 9;
         
         (View.findDrawableById("label") as Text).setText(Rez.Strings.label);
     }
@@ -57,19 +55,6 @@ class timerView extends WatchUi.DataField {
         }
     }
 
-    // function for debugging only 
-    function getZones() {       
-        var sport = UserProfile.getCurrentSport();
-        var currentSport = sport.toString();
-        //  for sport-specific HR zones
-        System.println("currentSport is: " + currentSport); 
-        var heartRateZones = UserProfile.getHeartRateZones(sport); 
-        var indexZone = 0; 
-        while (indexZone < 6) { 
-            System.println("heartRateZones[" + indexZone.toString() + "] = " + heartRateZones[indexZone].toString()); 
-            indexZone += 1;
-        } 
-    }
      
     function onTimerStart() as Void {
         if (!timerRunning) {
@@ -100,7 +85,6 @@ class timerView extends WatchUi.DataField {
         if (Activity has :getCurrentWorkoutStep) {
             var workoutStepInfo = Activity.getCurrentWorkoutStep();
             var type = workoutStepInfo.step.targetType.toString().toNumber();
-            System.println("workout_type is: " + type);
             if (type != 1){
                 if (workoutStepInfo.step.durationValue != null){
                     _dur = workoutStepInfo.step.durationValue; 
@@ -145,7 +129,6 @@ class timerView extends WatchUi.DataField {
                         var heartRateZones = UserProfile.getHeartRateZones(sport);
                         if (workoutStepInfo.step.targetValueLow != null){
                             low = workoutStepInfo.step.targetValueLow; 
-                            System.print("low is: " + low);
                             if (low > 0 and low < 6){
                                 targetLow = heartRateZones[low - 1];
                                 targetHigh = heartRateZones[low];
@@ -172,14 +155,12 @@ class timerView extends WatchUi.DataField {
     }
     
     function onWorkoutStarted() as Void {
-        _step = 1;
         myCounter = 0;
         //getZones(); leave out in production
         populateValues();
     }
 
     function onWorkoutStepComplete() as Void {
-        ++_step;
         myCounter = 0;
         populateValues();
     }
