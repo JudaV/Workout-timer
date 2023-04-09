@@ -76,8 +76,11 @@ class timerView extends WatchUi.DataField {
         }
     }
 
+    // added conditional to prevent zeroing on autolaps
     function onTimerLap() as Void {
-        myCounter = 0;
+        if (_dur == 0){
+            myCounter = 0;
+        }
     }
 
     function populateValues() as Void {
