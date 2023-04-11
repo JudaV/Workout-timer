@@ -1,1 +1,4 @@
 .DS_Store
+./bin
+bin/timer.prg
+bin/mir/source/timerView.mir

@@ -211,39 +211,69 @@ _Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_74_27_stop:
 _Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_74_8_if_end:
 _Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_73_37_stop:
     }
-    [ @file = "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc"; @line = 79; ]
+    [ @file = "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc"; @line = 80; ]
     function onTimerLap() as Void {
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_79_34_start:
-[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 80 8 ]
-        %tmp.1 = 0;
-        putv self :myCounter %tmp.1;
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_79_34_stop:
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_80_34_start:
+[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 81 8 ]
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_81_8_if_stmt:
+        %tmp.2 = getv ? :_dur;
+        %tmp.3 = 0;
+        %tmp.4 = eq %tmp.2 %tmp.3;
+        bf %tmp.4 @_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_81_8_if_end;
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_81_8_if_true:
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_81_22_start:
+[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 82 12 ]
+        %tmp.5 = 0;
+        putv self :myCounter %tmp.5;
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_81_22_stop:
+        goto @_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_81_8_if_end;
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_81_8_if_end:
+[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 86 8 ]
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_86_8_if_stmt:
+        %tmp.6 = getm $.Toybox.Activity;
+        %tmp.7 = getv function %tmp.6 :getCurrentWorkoutStep;
+        %tmp.8 = invoke %tmp.6 %tmp.7();
+        %tmp.9 = null;
+        %tmp.10 = eq %tmp.8 %tmp.9;
+        bf %tmp.10 @_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_86_8_if_end;
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_86_8_if_true:
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_86_53_start:
+[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 87 12 ]
+        %tmp.11 = 0;
+        putv self :targetLow %tmp.11;
+[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 88 12 ]
+        %tmp.12 = 0;
+        putv self :_dur %tmp.12;
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_86_53_stop:
+        goto @_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_86_8_if_end;
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_86_8_if_end:
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_80_34_stop:
     }
-    [ @file = "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc"; @line = 83; ]
+    [ @file = "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc"; @line = 92; ]
     function populateValues() as Void {
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_83_38_start:
-[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 84 8 ]
-        [ "_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_83_38_start" "_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_83_38_stop" ]
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_92_38_start:
+[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 93 8 ]
+        [ "_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_92_38_start" "_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_92_38_stop" ]
         %low.1 = local;
         %tmp.1 = 0;
         lputv %low.1 %tmp.1;
-[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 85 8 ]
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_85_8_if_stmt:
+[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 94 8 ]
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_94_8_if_stmt:
         %tmp.3 = getm $.Toybox.Activity;
         %tmp.5 = const :getCurrentWorkoutStep;
         %tmp.6 = canhazplz %tmp.3 %tmp.5;
-        bf %tmp.6 @_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_85_8_if_end;
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_85_8_if_true:
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_85_49_start:
-[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 86 12 ]
-        [ "_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_85_49_start" "_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_85_49_stop" ]
+        bf %tmp.6 @_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_94_8_if_end;
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_94_8_if_true:
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_94_49_start:
+[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 95 12 ]
+        [ "_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_94_49_start" "_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_94_49_stop" ]
         %workoutStepInfo.2 = local;
         %tmp.7 = getm $.Toybox.Activity;
         %tmp.8 = getv function %tmp.7 :getCurrentWorkoutStep;
         %tmp.9 = invoke %tmp.7 %tmp.8();
         lputv %workoutStepInfo.2 %tmp.9;
-[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 87 12 ]
-        [ "_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_85_49_start" "_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_85_49_stop" ]
+[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 96 12 ]
+        [ "_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_94_49_start" "_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_94_49_stop" ]
         %type.3 = local;
         %tmp.10 = lgetv %workoutStepInfo.2;
         %tmp.11 = getv %tmp.10 :step;
@@ -253,332 +283,351 @@ _Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_85_49_start:
         %tmp.15 = getv function %tmp.14 :toNumber;
         %tmp.16 = invoke %tmp.14 %tmp.15();
         lputv %type.3 %tmp.16;
-[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 88 12 ]
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_88_12_if_stmt:
+[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 98 12 ]
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_98_12_if_stmt:
         %tmp.18 = lgetv %type.3;
         %tmp.19 = 1;
         %tmp.20 = ne %tmp.18 %tmp.19;
-        bf %tmp.20 @_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_88_12_if_false;
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_88_12_if_true:
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_88_26_start:
-[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 89 16 ]
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_89_16_if_stmt:
+        bf %tmp.20 @_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_98_12_if_false;
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_98_12_if_true:
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_98_26_start:
+[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 99 16 ]
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_99_16_if_stmt:
         %tmp.21 = lgetv %workoutStepInfo.2;
         %tmp.22 = getv %tmp.21 :step;
         %tmp.23 = getv %tmp.22 :durationValue;
         %tmp.24 = null;
         %tmp.25 = ne %tmp.23 %tmp.24;
-        bf %tmp.25 @_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_89_16_if_false;
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_89_16_if_true:
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_89_63_start:
-[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 90 20 ]
+        bf %tmp.25 @_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_99_16_if_false;
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_99_16_if_true:
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_99_63_start:
+[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 100 20 ]
         %tmp.26 = lgetv %workoutStepInfo.2;
         %tmp.27 = getv %tmp.26 :step;
         %tmp.28 = getv %tmp.27 :durationValue;
         putv self :_dur %tmp.28;
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_89_63_stop:
-        goto @_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_89_16_if_end;
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_89_16_if_false:
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_92_21_start:
-[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 93 20 ]
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_99_63_stop:
+        goto @_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_99_16_if_end;
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_99_16_if_false:
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_102_21_start:
+[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 103 20 ]
         %tmp.29 = 0;
         putv self :_dur %tmp.29;
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_92_21_stop:
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_89_16_if_end:
-[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 96 16 ]
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_96_16_if_stmt:
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_102_21_stop:
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_99_16_if_end:
+[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 106 16 ]
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_106_16_if_stmt:
         %tmp.30 = lgetv %workoutStepInfo.2;
         %tmp.31 = getv %tmp.30 :step;
         %tmp.32 = getv %tmp.31 :targetValueHigh;
         %tmp.33 = 1000;
         %tmp.34 = gt %tmp.32 %tmp.33;
-        bf %tmp.34 @_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_96_16_if_false;
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_96_16_if_true:
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_96_64_start:
-[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 97 20 ]
+        bf %tmp.34 @_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_106_16_if_false;
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_106_16_if_true:
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_106_64_start:
+[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 107 20 ]
         %tmp.35 = lgetv %workoutStepInfo.2;
         %tmp.36 = getv %tmp.35 :step;
         %tmp.37 = getv %tmp.36 :targetValueHigh;
         %tmp.38 = 1000;
         %tmp.39 = sub %tmp.37 %tmp.38;
         putv self :targetHigh %tmp.39;
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_96_64_stop:
-        goto @_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_96_16_if_end;
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_96_16_if_false:
-[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 99 21 ]
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_99_21_if_stmt:
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_106_64_stop:
+        goto @_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_106_16_if_end;
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_106_16_if_false:
+[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 109 21 ]
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_109_21_if_stmt:
         %tmp.40 = lgetv %workoutStepInfo.2;
         %tmp.41 = getv %tmp.40 :step;
         %tmp.42 = getv %tmp.41 :targetValueHigh;
         %tmp.43 = 10;
         %tmp.44 = gt %tmp.42 %tmp.43;
-        bf %tmp.44 @_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_99_21_if_false;
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_99_21_if_true:
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_99_67_start:
-[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 100 20 ]
+        bf %tmp.44 @_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_109_21_if_false;
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_109_21_if_true:
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_109_67_start:
+[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 110 20 ]
         %tmp.45 = lgetv %workoutStepInfo.2;
         %tmp.46 = getv %tmp.45 :step;
         %tmp.47 = getv %tmp.46 :targetValueHigh;
         putv self :targetHigh %tmp.47;
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_99_67_stop:
-        goto @_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_99_21_if_end;
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_99_21_if_false:
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_102_21_start:
-[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 103 20 ]
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_109_67_stop:
+        goto @_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_109_21_if_end;
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_109_21_if_false:
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_112_21_start:
+[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 113 20 ]
         %tmp.48 = 0;
         putv self :targetHigh %tmp.48;
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_102_21_stop:
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_99_21_if_end:
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_96_16_if_end:
-[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 105 16 ]
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_105_16_if_stmt:
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_112_21_stop:
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_109_21_if_end:
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_106_16_if_end:
+[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 115 16 ]
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_115_16_if_stmt:
         %tmp.49 = lgetv %workoutStepInfo.2;
         %tmp.50 = getv %tmp.49 :step;
         %tmp.51 = getv %tmp.50 :targetValueLow;
         %tmp.52 = 1000;
         %tmp.53 = gt %tmp.51 %tmp.52;
-        bf %tmp.53 @_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_105_16_if_false;
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_105_16_if_true:
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_105_63_start:
-[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 106 20 ]
+        bf %tmp.53 @_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_115_16_if_false;
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_115_16_if_true:
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_115_63_start:
+[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 116 20 ]
         %tmp.54 = lgetv %workoutStepInfo.2;
         %tmp.55 = getv %tmp.54 :step;
         %tmp.56 = getv %tmp.55 :targetValueLow;
         %tmp.57 = 1000;
         %tmp.58 = sub %tmp.56 %tmp.57;
         putv self :targetLow %tmp.58;
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_105_63_stop:
-        goto @_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_105_16_if_end;
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_105_16_if_false:
-[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 110 21 ]
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_110_21_if_stmt:
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_115_63_stop:
+        goto @_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_115_16_if_end;
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_115_16_if_false:
+[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 120 21 ]
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_120_21_if_stmt:
         %tmp.59 = lgetv %workoutStepInfo.2;
         %tmp.60 = getv %tmp.59 :step;
         %tmp.61 = getv %tmp.60 :targetValueLow;
         %tmp.62 = 10;
         %tmp.63 = gt %tmp.61 %tmp.62;
-        bf %tmp.63 @_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_110_21_if_false;
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_110_21_if_true:
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_110_66_start:
-[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 111 20 ]
+        bf %tmp.63 @_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_120_21_if_false;
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_120_21_if_true:
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_120_66_start:
+[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 121 20 ]
         %tmp.64 = lgetv %workoutStepInfo.2;
         %tmp.65 = getv %tmp.64 :step;
         %tmp.66 = getv %tmp.65 :targetValueLow;
         putv self :targetLow %tmp.66;
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_110_66_stop:
-        goto @_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_110_21_if_end;
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_110_21_if_false:
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_113_21_start:
-[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 114 20 ]
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_120_66_stop:
+        goto @_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_120_21_if_end;
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_120_21_if_false:
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_123_21_start:
+[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 124 20 ]
         %tmp.67 = 0;
         putv self :targetLow %tmp.67;
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_113_21_stop:
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_110_21_if_end:
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_105_16_if_end:
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_88_26_stop:
-        goto @_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_88_12_if_end;
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_88_12_if_false:
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_119_17_start:
-[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 120 16 ]
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_120_16_if_stmt:
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_123_21_stop:
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_120_21_if_end:
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_115_16_if_end:
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_98_26_stop:
+        goto @_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_98_12_if_end;
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_98_12_if_false:
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_129_17_start:
+[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 130 16 ]
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_130_16_if_stmt:
         %tmp.68 = lgetv %workoutStepInfo.2;
         %tmp.69 = getv %tmp.68 :step;
         %tmp.70 = getv %tmp.69 :durationValue;
         %tmp.71 = null;
         %tmp.72 = ne %tmp.70 %tmp.71;
-        bf %tmp.72 @_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_120_16_if_false;
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_120_16_if_true:
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_120_63_start:
-[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 121 20 ]
+        bf %tmp.72 @_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_130_16_if_false;
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_130_16_if_true:
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_130_63_start:
+[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 131 20 ]
         %tmp.73 = lgetv %workoutStepInfo.2;
         %tmp.74 = getv %tmp.73 :step;
         %tmp.75 = getv %tmp.74 :durationValue;
         putv self :_dur %tmp.75;
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_120_63_stop:
-        goto @_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_120_16_if_end;
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_120_16_if_false:
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_123_21_start:
-[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 124 20 ]
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_130_63_stop:
+        goto @_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_130_16_if_end;
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_130_16_if_false:
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_133_21_start:
+[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 134 20 ]
         %tmp.76 = 0;
         putv self :_dur %tmp.76;
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_123_21_stop:
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_120_16_if_end:
-[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 126 16 ]
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_126_16_if_stmt:
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_133_21_stop:
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_130_16_if_end:
+[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 136 16 ]
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_136_16_if_stmt:
         %tmp.78 = getm $.Toybox.UserProfile;
         %tmp.80 = const :getCurrentSport;
         %tmp.81 = canhazplz %tmp.78 %tmp.80;
-        bf %tmp.81 @_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_126_16_if_false;
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_126_16_if_true:
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_126_54_start:
-[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 127 20 ]
-        [ "_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_126_54_start" "_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_126_54_stop" ]
+        bf %tmp.81 @_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_136_16_if_false;
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_136_16_if_true:
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_136_54_start:
+[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 137 20 ]
+        [ "_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_136_54_start" "_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_136_54_stop" ]
         %sport.4 = local;
         %tmp.82 = getm $.Toybox.UserProfile;
         %tmp.83 = getv function %tmp.82 :getCurrentSport;
         %tmp.84 = invoke %tmp.82 %tmp.83();
         lputv %sport.4 %tmp.84;
-[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 128 20 ]
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_128_20_if_stmt:
+[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 138 20 ]
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_138_20_if_stmt:
         %tmp.86 = getm $.Toybox.UserProfile;
         %tmp.88 = const :getHeartRateZones;
         %tmp.89 = canhazplz %tmp.86 %tmp.88;
-        bf %tmp.89 @_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_128_20_if_end;
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_128_20_if_true:
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_128_59_start:
-[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 129 24 ]
-        [ "_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_128_59_start" "_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_128_59_stop" ]
+        bf %tmp.89 @_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_138_20_if_end;
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_138_20_if_true:
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_138_59_start:
+[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 139 24 ]
+        [ "_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_138_59_start" "_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_138_59_stop" ]
         %heartRateZones.5 = local;
         %tmp.90 = getm $.Toybox.UserProfile;
         %tmp.91 = getv function %tmp.90 :getHeartRateZones;
         %tmp.93 = lgetv %sport.4;
         %tmp.94 = invoke %tmp.90 %tmp.91(%tmp.93);
         lputv %heartRateZones.5 %tmp.94;
-[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 130 24 ]
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_130_24_if_stmt:
+[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 140 24 ]
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_140_24_if_stmt:
         %tmp.95 = lgetv %workoutStepInfo.2;
         %tmp.96 = getv %tmp.95 :step;
         %tmp.97 = getv %tmp.96 :targetValueLow;
         %tmp.98 = null;
         %tmp.99 = ne %tmp.97 %tmp.98;
-        bf %tmp.99 @_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_130_24_if_end;
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_130_24_if_true:
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_130_72_start:
-[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 131 28 ]
+        bf %tmp.99 @_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_140_24_if_end;
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_140_24_if_true:
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_140_72_start:
+[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 141 28 ]
         %tmp.100 = lgetv %workoutStepInfo.2;
         %tmp.101 = getv %tmp.100 :step;
         %tmp.102 = getv %tmp.101 :targetValueLow;
         lputv %low.1 %tmp.102;
-[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 132 28 ]
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_132_28_if_stmt:
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_132_32_begin:
+[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 142 28 ]
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_142_28_if_stmt:
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_142_32_begin:
         %tmp.104 = lgetv %low.1;
         %tmp.105 = 0;
         %tmp.106 = gt %tmp.104 %tmp.105;
         %tmp.107 = dup %tmp.106;
-        bf %tmp.107 @_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_132_44_end;
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_132_44_true:
+        bf %tmp.107 @_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_142_44_end;
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_142_44_true:
         %tmp.109 = lgetv %low.1;
         %tmp.110 = 6;
         %tmp.111 = lt %tmp.109 %tmp.110;
         %tmp.112 = and %tmp.106 %tmp.111;
         push %tmp.112;
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_132_44_end:
-        %tmp.113 = phi [%tmp.107 @_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_132_32_begin] [%tmp.112 @_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_132_44_true] [%tmp.113 @_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_132_44_end];
-        bf %tmp.113 @_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_132_28_if_end;
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_132_28_if_true:
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_132_52_start:
-[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 133 32 ]
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_142_44_end:
+        %tmp.113 = phi [%tmp.107 @_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_142_32_begin] [%tmp.112 @_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_142_44_true] [%tmp.113 @_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_142_44_end];
+        bf %tmp.113 @_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_142_28_if_end;
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_142_28_if_true:
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_142_52_start:
+[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 143 32 ]
         %tmp.115 = lgetv %heartRateZones.5;
         %tmp.117 = lgetv %low.1;
         %tmp.118 = 1;
         %tmp.119 = sub %tmp.117 %tmp.118;
         %tmp.120 = agetv %tmp.115 %tmp.119;
         putv self :targetLow %tmp.120;
-[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 134 32 ]
+[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 144 32 ]
         %tmp.122 = lgetv %heartRateZones.5;
         %tmp.124 = lgetv %low.1;
         %tmp.125 = agetv %tmp.122 %tmp.124;
         putv self :targetHigh %tmp.125;
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_132_52_stop:
-        goto @_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_132_28_if_end;
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_132_28_if_end:
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_130_72_stop:
-        goto @_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_130_24_if_end;
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_130_24_if_end:
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_128_59_stop:
-        goto @_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_128_20_if_end;
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_128_20_if_end:
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_126_54_stop:
-        goto @_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_126_16_if_end;
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_126_16_if_false:
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_139_21_start:
-[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 140 20 ]
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_140_20_if_stmt:
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_142_52_stop:
+        goto @_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_142_28_if_end;
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_142_28_if_end:
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_140_72_stop:
+        goto @_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_140_24_if_end;
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_140_24_if_end:
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_138_59_stop:
+        goto @_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_138_20_if_end;
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_138_20_if_end:
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_136_54_stop:
+        goto @_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_136_16_if_end;
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_136_16_if_false:
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_149_21_start:
+[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 150 20 ]
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_150_20_if_stmt:
         %tmp.126 = lgetv %workoutStepInfo.2;
         %tmp.127 = getv %tmp.126 :step;
         %tmp.128 = getv %tmp.127 :targetValueLow;
         %tmp.129 = null;
         %tmp.130 = ne %tmp.128 %tmp.129;
-        bf %tmp.130 @_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_140_20_if_false;
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_140_20_if_true:
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_140_68_start:
-[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 141 24 ]
+        bf %tmp.130 @_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_150_20_if_false;
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_150_20_if_true:
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_150_68_start:
+[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 151 24 ]
         %tmp.131 = lgetv %workoutStepInfo.2;
         %tmp.132 = getv %tmp.131 :step;
         %tmp.133 = getv %tmp.132 :targetValueLow;
         putv self :targetLow %tmp.133;
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_140_68_stop:
-        goto @_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_140_20_if_end;
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_140_20_if_false:
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_143_25_start:
-[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 144 24 ]
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_150_68_stop:
+        goto @_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_150_20_if_end;
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_150_20_if_false:
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_153_25_start:
+[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 154 24 ]
         %tmp.134 = 0;
         putv self :targetLow %tmp.134;
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_143_25_stop:
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_140_20_if_end:
-[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 146 20 ]
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_146_20_if_stmt:
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_153_25_stop:
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_150_20_if_end:
+[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 156 20 ]
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_156_20_if_stmt:
         %tmp.135 = lgetv %workoutStepInfo.2;
         %tmp.136 = getv %tmp.135 :step;
         %tmp.137 = getv %tmp.136 :targetValueHigh;
         %tmp.138 = null;
         %tmp.139 = ne %tmp.137 %tmp.138;
-        bf %tmp.139 @_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_146_20_if_false;
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_146_20_if_true:
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_146_69_start:
-[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 147 24 ]
+        bf %tmp.139 @_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_156_20_if_false;
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_156_20_if_true:
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_156_69_start:
+[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 157 24 ]
         %tmp.140 = lgetv %workoutStepInfo.2;
         %tmp.141 = getv %tmp.140 :step;
         %tmp.142 = getv %tmp.141 :targetValueHigh;
         putv self :targetHigh %tmp.142;
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_146_69_stop:
-        goto @_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_146_20_if_end;
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_146_20_if_false:
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_149_25_start:
-[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 150 24 ]
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_156_69_stop:
+        goto @_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_156_20_if_end;
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_156_20_if_false:
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_159_25_start:
+[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 160 24 ]
         %tmp.143 = 0;
         putv self :targetHigh %tmp.143;
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_149_25_stop:
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_146_20_if_end:
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_139_21_stop:
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_126_16_if_end:
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_119_17_stop:
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_88_12_if_end:
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_85_49_stop:
-        goto @_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_85_8_if_end;
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_85_8_if_end:
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_83_38_stop:
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_159_25_stop:
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_156_20_if_end:
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_149_21_stop:
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_136_16_if_end:
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_129_17_stop:
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_98_12_if_end:
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_94_49_stop:
+        goto @_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_94_8_if_end;
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_94_8_if_end:
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_92_38_stop:
     }
-    [ @file = "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc"; @line = 157; ]
+    [ @file = "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc"; @line = 167; ]
     function onWorkoutStarted() as Void {
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_157_40_start:
-[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 158 8 ]
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_167_40_start:
+[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 168 8 ]
         %tmp.1 = 0;
         putv self :myCounter %tmp.1;
-[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 160 8 ]
-        %tmp.2 = self;
-        %tmp.3 = getv function %tmp.2 :populateValues;
-        invoke %tmp.2 %tmp.3();
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_157_40_stop:
-    }
-    [ @file = "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc"; @line = 163; ]
-    function onWorkoutStepComplete() as Void {
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_163_45_start:
-[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 164 8 ]
-        %tmp.1 = 0;
-        putv self :myCounter %tmp.1;
-[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 165 8 ]
-        %tmp.2 = self;
-        %tmp.3 = getv function %tmp.2 :populateValues;
-        invoke %tmp.2 %tmp.3();
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_163_45_stop:
-    }
-    [ @file = "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc"; @line = 168; ]
-    function secondsToTimeString(totSeconds) {
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_168_45_start:
 [ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 170 8 ]
-        [ "_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_168_45_start" "_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_168_45_stop" ]
+        %tmp.2 = self;
+        %tmp.3 = getv function %tmp.2 :populateValues;
+        invoke %tmp.2 %tmp.3();
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_167_40_stop:
+    }
+    [ @file = "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc"; @line = 173; ]
+    function onWorkoutStepComplete() as Void {
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_173_45_start:
+[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 174 8 ]
+        %tmp.1 = 0;
+        putv self :myCounter %tmp.1;
+[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 175 8 ]
+        %tmp.2 = self;
+        %tmp.3 = getv function %tmp.2 :populateValues;
+        invoke %tmp.2 %tmp.3();
+[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 177 8 ]
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_177_8_if_stmt:
+        %tmp.4 = getm $.Toybox.Activity;
+        %tmp.5 = getv function %tmp.4 :getNextWorkoutStep;
+        %tmp.6 = invoke %tmp.4 %tmp.5();
+        %tmp.7 = null;
+        %tmp.8 = eq %tmp.6 %tmp.7;
+        bf %tmp.8 @_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_177_8_if_end;
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_177_8_if_true:
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_177_50_start:
+[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 178 12 ]
+        %tmp.9 = 0;
+        putv self :targetLow %tmp.9;
+[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 179 12 ]
+        %tmp.10 = 0;
+        putv self :_dur %tmp.10;
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_177_50_stop:
+        goto @_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_177_8_if_end;
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_177_8_if_end:
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_173_45_stop:
+    }
+    [ @file = "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc"; @line = 183; ]
+    function secondsToTimeString(totSeconds) {
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_183_45_start:
+[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 185 8 ]
+        [ "_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_183_45_start" "_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_183_45_stop" ]
         %hours.1 = local;
         %tmp.2 = lgetv %totSeconds;
         %tmp.3 = 3600;
@@ -586,8 +635,8 @@ _Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_168_45_start:
         %tmp.5 = getv function %tmp.4 :toNumber;
         %tmp.6 = invoke %tmp.4 %tmp.5();
         lputv %hours.1 %tmp.6;
-[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 171 8 ]
-        [ "_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_168_45_start" "_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_168_45_stop" ]
+[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 186 8 ]
+        [ "_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_183_45_start" "_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_183_45_stop" ]
         %minutes.2 = local;
         %tmp.8 = lgetv %totSeconds;
         %tmp.10 = lgetv %hours.1;
@@ -599,8 +648,8 @@ _Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_168_45_start:
         %tmp.16 = getv function %tmp.15 :toNumber;
         %tmp.17 = invoke %tmp.15 %tmp.16();
         lputv %minutes.2 %tmp.17;
-[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 172 8 ]
-        [ "_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_168_45_start" "_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_168_45_stop" ]
+[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 187 8 ]
+        [ "_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_183_45_start" "_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_183_45_stop" ]
         %seconds.3 = local;
         %tmp.19 = lgetv %totSeconds;
         %tmp.21 = lgetv %hours.1;
@@ -612,8 +661,8 @@ _Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_168_45_start:
         %tmp.28 = mul %tmp.26 %tmp.27;
         %tmp.29 = sub %tmp.24 %tmp.28;
         lputv %seconds.3 %tmp.29;
-[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 173 8 ]
-        [ "_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_168_45_start" "_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_168_45_stop" ]
+[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 188 8 ]
+        [ "_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_183_45_start" "_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_183_45_stop" ]
         %timeString.4 = local;
         %tmp.30 = getm $.Toybox.Lang;
         %tmp.31 = getv function %tmp.30 :format;
@@ -639,15 +688,15 @@ _Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_168_45_start:
         %tmp.51 = aputv %tmp.50 2 %tmp.49;
         %tmp.52 = invoke %tmp.30 %tmp.31(%tmp.32, %tmp.51);
         lputv %timeString.4 %tmp.52;
-[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 178 8 ]
+[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 193 8 ]
         %tmp.54 = lgetv %timeString.4;
         ret %tmp.54;
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_168_45_stop:
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_183_45_stop:
     }
-    [ @file = "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc"; @line = 182; ]
+    [ @file = "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc"; @line = 197; ]
     function onUpdate(dc as Dc) as Void {
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_182_40_start:
-[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 185 8 ]
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_197_40_start:
+[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 200 8 ]
         %tmp.2 = getv ? :View;
         %tmp.3 = getv function %tmp.2 :findDrawableById;
         %tmp.4 = "Background";
@@ -658,8 +707,8 @@ _Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_182_40_start:
         %tmp.9 = getv function %tmp.8 :getBackgroundColor;
         %tmp.10 = invoke %tmp.8 %tmp.9();
         invoke %tmp.6 %tmp.7(%tmp.10);
-[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 188 8 ]
-        [ "_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_182_40_start" "_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_182_40_stop" ]
+[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 203 8 ]
+        [ "_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_197_40_start" "_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_197_40_stop" ]
         %value.1 = local;
         %tmp.12 = getv ? :View;
         %tmp.13 = getv function %tmp.12 :findDrawableById;
@@ -667,8 +716,8 @@ _Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_182_40_start:
         %tmp.15 = invoke %tmp.12 %tmp.13(%tmp.14);
         %tmp.16 = as %tmp.15 Text;
         lputv %value.1 %tmp.16;
-[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 189 8 ]
-        [ "_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_182_40_start" "_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_182_40_stop" ]
+[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 204 8 ]
+        [ "_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_197_40_start" "_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_197_40_stop" ]
         %label.2 = local;
         %tmp.18 = getv ? :View;
         %tmp.19 = getv function %tmp.18 :findDrawableById;
@@ -676,49 +725,49 @@ _Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_182_40_start:
         %tmp.21 = invoke %tmp.18 %tmp.19(%tmp.20);
         %tmp.22 = as %tmp.21 Text;
         lputv %label.2 %tmp.22;
-[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 190 8 ]
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_190_8_if_stmt:
+[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 205 8 ]
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_205_8_if_stmt:
         %tmp.23 = self;
         %tmp.24 = getv function %tmp.23 :getBackgroundColor;
         %tmp.25 = invoke %tmp.23 %tmp.24();
         %tmp.26 = getm $.Toybox.Graphics;
         %tmp.27 = getv %tmp.26 :COLOR_BLACK;
         %tmp.28 = eq %tmp.25 %tmp.27;
-        bf %tmp.28 @_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_190_8_if_false;
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_190_8_if_true:
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_190_58_start:
-[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 191 12 ]
+        bf %tmp.28 @_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_205_8_if_false;
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_205_8_if_true:
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_205_58_start:
+[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 206 12 ]
         %tmp.29 = lgetv %value.1;
         %tmp.30 = getv function %tmp.29 :setColor;
         %tmp.31 = getm $.Toybox.Graphics;
         %tmp.32 = getv %tmp.31 :COLOR_WHITE;
         invoke %tmp.29 %tmp.30(%tmp.32);
-[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 192 12 ]
+[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 207 12 ]
         %tmp.33 = lgetv %label.2;
         %tmp.34 = getv function %tmp.33 :setColor;
         %tmp.35 = getm $.Toybox.Graphics;
         %tmp.36 = getv %tmp.35 :COLOR_WHITE;
         invoke %tmp.33 %tmp.34(%tmp.36);
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_190_58_stop:
-        goto @_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_190_8_if_end;
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_190_8_if_false:
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_194_13_start:
-[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 195 12 ]
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_205_58_stop:
+        goto @_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_205_8_if_end;
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_205_8_if_false:
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_209_13_start:
+[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 210 12 ]
         %tmp.37 = lgetv %value.1;
         %tmp.38 = getv function %tmp.37 :setColor;
         %tmp.39 = getm $.Toybox.Graphics;
         %tmp.40 = getv %tmp.39 :COLOR_BLACK;
         invoke %tmp.37 %tmp.38(%tmp.40);
-[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 196 12 ]
+[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 211 12 ]
         %tmp.41 = lgetv %label.2;
         %tmp.42 = getv function %tmp.41 :setColor;
         %tmp.43 = getm $.Toybox.Graphics;
         %tmp.44 = getv %tmp.43 :COLOR_BLACK;
         invoke %tmp.41 %tmp.42(%tmp.44);
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_194_13_stop:
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_190_8_if_end:
-[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 199 8 ]
-        [ "_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_182_40_start" "_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_182_40_stop" ]
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_209_13_stop:
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_205_8_if_end:
+[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 214 8 ]
+        [ "_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_197_40_start" "_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_197_40_stop" ]
         %highLowString.3 = local;
         %tmp.45 = getm $.Toybox.Lang;
         %tmp.46 = getv function %tmp.45 :format;
@@ -732,7 +781,7 @@ _Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_190_8_if_end:
         %tmp.56 = aputv %tmp.55 1 %tmp.54;
         %tmp.57 = invoke %tmp.45 %tmp.46(%tmp.47, %tmp.56);
         lputv %highLowString.3 %tmp.57;
-[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 200 8 ]
+[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 215 8 ]
         %tmp.58 = lgetv %value.1;
         %tmp.59 = getv function %tmp.58 :setText;
         %tmp.60 = self;
@@ -740,15 +789,15 @@ _Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_190_8_if_end:
         %tmp.63 = getv ? :countDown;
         %tmp.64 = invoke %tmp.60 %tmp.61(%tmp.63);
         invoke %tmp.58 %tmp.59(%tmp.64);
-[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 201 8 ]
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_201_8_if_stmt:
+[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 216 8 ]
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_216_8_if_stmt:
         %tmp.66 = getv ? :targetLow;
         %tmp.67 = 0;
         %tmp.68 = eq %tmp.66 %tmp.67;
-        bf %tmp.68 @_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_201_8_if_false;
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_201_8_if_true:
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_201_27_start:
-[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 202 12 ]
+        bf %tmp.68 @_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_216_8_if_false;
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_216_8_if_true:
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_216_27_start:
+[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 217 12 ]
         %tmp.70 = getv ? :View;
         %tmp.71 = getv function %tmp.70 :findDrawableById;
         %tmp.72 = "label";
@@ -759,11 +808,11 @@ _Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_201_27_start:
         %tmp.78 = getv %tmp.77 :Strings;
         %tmp.79 = getv %tmp.78 :label;
         invoke %tmp.74 %tmp.75(%tmp.79);
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_201_27_stop:
-        goto @_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_201_8_if_end;
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_201_8_if_false:
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_204_13_start:
-[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 205 12 ]
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_216_27_stop:
+        goto @_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_216_8_if_end;
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_216_8_if_false:
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_219_13_start:
+[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 220 12 ]
         %tmp.81 = getv ? :View;
         %tmp.82 = getv function %tmp.81 :findDrawableById;
         %tmp.83 = "label";
@@ -772,14 +821,14 @@ _Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_204_13_start:
         %tmp.86 = getv function %tmp.85 :setText;
         %tmp.88 = lgetv %highLowString.3;
         invoke %tmp.85 %tmp.86(%tmp.88);
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_204_13_stop:
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_201_8_if_end:
-[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 208 8 ]
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_219_13_stop:
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_216_8_if_end:
+[ "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc" 223 8 ]
         %tmp.90 = getv ? :View;
         %tmp.91 = getv function %tmp.90 :onUpdate;
         %tmp.93 = lgetv %dc;
         invoke %tmp.90 %tmp.91(%tmp.93);
-_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_182_40_stop:
+_Users_judavecht_dev_garmin_timer_timer_source_timerView_mc_197_40_stop:
     }
 }
 [ @file = "/Users/judavecht/dev/garmin/timer/timer/source/timerView.mc"; @line = 1; ]
