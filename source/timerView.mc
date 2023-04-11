@@ -81,6 +81,12 @@ class timerView extends WatchUi.DataField {
         if (_dur == 0){
             myCounter = 0;
         }
+
+        // get defaults back after workout ends
+        if (Activity.getCurrentWorkoutStep() == null){
+            targetLow = 0;
+            _dur = 0;
+        }
     }
 
     function populateValues() as Void {
@@ -88,6 +94,7 @@ class timerView extends WatchUi.DataField {
         if (Activity has :getCurrentWorkoutStep) {
             var workoutStepInfo = Activity.getCurrentWorkoutStep();
             var type = workoutStepInfo.step.targetType.toString().toNumber();
+            // type 1 == WORKOUT_STEP_TARGET_HEART_RATE
             if (type != 1){
                 if (workoutStepInfo.step.durationValue != null){
                     _dur = workoutStepInfo.step.durationValue; 
