@@ -18,7 +18,7 @@ class timerView extends WatchUi.DataField {
         _dur = 0;
         myCounter = 0;
         countDown = 0;
-        timerRunning = 0;
+        timerRunning = false;
         targetHigh = 0;
         targetLow = 0;
     }
@@ -53,9 +53,13 @@ class timerView extends WatchUi.DataField {
         if (timerRunning) {
             myCounter++;
         }
+        // reset after workout ends 
+        if (Activity.getCurrentWorkoutStep() == null){
+            targetLow = 0;
+            _dur = 0;
+        }
     }
 
-     
     function onTimerStart() as Void {
         if (!timerRunning) {
             timerRunning = true;
@@ -80,12 +84,6 @@ class timerView extends WatchUi.DataField {
     function onTimerLap() as Void {
         if (_dur == 0){
             myCounter = 0;
-        }
-
-        // get defaults back after workout ends
-        if (Activity.getCurrentWorkoutStep() == null){
-            targetLow = 0;
-            _dur = 0;
         }
     }
 
