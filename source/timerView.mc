@@ -12,6 +12,11 @@ class timerView extends WatchUi.DataField {
     hidden var timerRunning; 
     hidden var targetHigh;
     hidden var targetLow;
+    hidden var nextTargetHigh;
+    hidden var nextTargetLow;
+    hidden var label;
+    hidden var value;
+    hidden var fillColor;
     
     function initialize() {
         DataField.initialize();
@@ -21,19 +26,11 @@ class timerView extends WatchUi.DataField {
         timerRunning = false;
         targetHigh = 0;
         targetLow = 0;
-    }
-    
-    //  Anytime the size of obscurity of
-    // the draw context is changed this will be called.
-    function onLayout(dc as Dc) as Void {
-        // Use the generic, centered layout
-        View.setLayout(Rez .Layouts.MainLayout(dc));
-        var labelView = View.findDrawableById("label");
-        labelView.locY = labelView.locY - 20;
-        var valueView = View.findDrawableById("value");
-        valueView.locY = valueView.locY + 9;
-        
-        (View.findDrawableById("label") as Text).setText(Rez.Strings.label);
+        nextTargetHigh = 0;
+        nextTargetLow = 0;
+        value = 0;
+        label = "workout timer";
+        fillColor = Graphics.COLOR_TRANSPARENT;
     }
     
     // The given info object contains all the current workout information.
@@ -89,78 +86,128 @@ class timerView extends WatchUi.DataField {
 
     function populateValues() as Void {
         var low = 0;
+        var nextLow = 0;
+        var workoutStepInfo;
+        var nextWorkoutStepInfo;
+    
         if (Activity has :getCurrentWorkoutStep) {
-            var workoutStepInfo = Activity.getCurrentWorkoutStep();
-            var type = workoutStepInfo.step.targetType.toString().toNumber();
-            // type 1 == WORKOUT_STEP_TARGET_HEART_RATE
-            if (type != 1){
-                if (workoutStepInfo.step.durationValue != null){
-                    _dur = workoutStepInfo.step.durationValue; 
-                }
-                else {
-                    _dur = 0;
-                }
-                // power targets in workout .fit files are represented as power-in-watts + 1000
-                if (workoutStepInfo.step.targetValueHigh > 1000){
-                    targetHigh = workoutStepInfo.step.targetValueHigh - 1000;
-                }
-                else if (workoutStepInfo.step.targetValueHigh > 10){
-                    targetHigh = workoutStepInfo.step.targetValueHigh;
-                }
-                else {
-                    targetHigh = 0;
-                }
-                if (workoutStepInfo.step.targetValueLow > 1000){
-                    targetLow = workoutStepInfo.step.targetValueLow - 1000;
-                }
-                // it seems that if target type = 7 workoutStepInfo.step.targetValueLow is used for 
-                // power zones but we can not reach this through the Toybox API.
-                else if (workoutStepInfo.step.targetValueLow > 10){
-                    targetLow = workoutStepInfo.step.targetValueLow;
-                }
-                else {
-                    targetLow = 0;
-                }
-            }
-            // target type is 1 == heart_rate:
-            // heart rate zone == targetValueLow :rolling_eyes:
-            else {
-                if (workoutStepInfo.step.durationValue != null){
-                    _dur = workoutStepInfo.step.durationValue; 
-                }
-                else {
-                    _dur = 0;
-                }
-                if (UserProfile has :getCurrentSport) {
-                    var sport = UserProfile.getCurrentSport();
-                    if (UserProfile has :getHeartRateZones){
-                        var heartRateZones = UserProfile.getHeartRateZones(sport);
-                        if (workoutStepInfo.step.targetValueLow != null){
-                            low = workoutStepInfo.step.targetValueLow; 
-                            if (low > 0 and low < 6){
-                                targetLow = heartRateZones[low - 1];
-                                targetHigh = heartRateZones[low];
+            workoutStepInfo = Activity.getCurrentWorkoutStep();
+            if (workoutStepInfo != null) {
+                if (workoutStepInfo has : step) {
+                    if (workoutStepInfo.step instanceof Activity.WorkoutStep){
+                        targetHigh = workoutStepInfo.step.targetValueHigh;
+                        targetLow = workoutStepInfo.step.targetValueLow;
+                        // set the duration of the workout steps
+                        if (workoutStepInfo.step.durationValue != null){
+                            _dur = workoutStepInfo.step.durationValue; 
+                        }
+                        else {
+                            _dur = 0;
+                        }
+                        // power targets in workout .fit files are represented as power-in-watts + 1000
+                        if (targetHigh > 1000){
+                            targetHigh = targetHigh - 1000;
+                        }
+                        else if (targetHigh > 7) {
+                            targetHigh = targetHigh;
+                        } 
+                        else {
+                            targetHigh = 0;
+                        }
+
+                        // it seems that if target type = 7 workoutStepInfo.step.targetValueLow is used for 
+                        // power zones but we can not reach this through the Toybox API.
+                        if (targetLow > 1000){
+                            targetLow = targetLow - 1000;
+                        }
+                        else if (targetLow > 7){
+                            targetLow = targetLow;
+                        }
+                        // heart rate zone == targetValueLow :rolling_eyes:
+                        else if (targetLow > 0 and targetLow < 6 ) {
+                            if (UserProfile has :getCurrentSport) {
+                                var sport = UserProfile.getCurrentSport();
+                                if (UserProfile has :getHeartRateZones){
+                                    var heartRateZones = UserProfile.getHeartRateZones(sport);
+                                    if (workoutStepInfo.step.targetValueLow != null){
+                                        low = workoutStepInfo.step.targetValueLow; 
+                                        if (low > 0 and low < 6){
+                                            targetLow = heartRateZones[low - 1];
+                                            targetHigh = heartRateZones[low];
+                                        }
+                                        else {
+                                            targetLow = workoutStepInfo.step.targetValueLow;
+                                            targetHigh = workoutStepInfo.step.targetValueHigh;
+                                        }
+                                    }
+                                } 
                             }
                         }
-                    } 
+                        else {
+                            targetLow = 0;
+                        }
+                    }
                 }
-                else {
-                    if (workoutStepInfo.step.targetValueLow != null){
-                        targetLow = workoutStepInfo.step.targetValueLow;
-                    }
-                    else {
-                        targetLow = 0;
-                    }
-                    if (workoutStepInfo.step.targetValueHigh != null){
-                        targetHigh = workoutStepInfo.step.targetValueHigh;
-                    }
-                    else {
-                        targetHigh = 0;
-                    }
-                }                    
+            }
+            else {
+                targetLow = 0;
+                targetHigh = 0;
             }
         }
+        // repeat for nextStepInfo 
+        if (Activity has :getNextWorkoutStep) {
+            nextWorkoutStepInfo = Activity.getNextWorkoutStep();
+            if (nextWorkoutStepInfo != null){
+                if (nextWorkoutStepInfo has : step) {
+                    if (nextWorkoutStepInfo.step instanceof Activity.WorkoutStep) {
+                        nextTargetHigh = nextWorkoutStepInfo.step.targetValueHigh;
+                        nextTargetLow = nextWorkoutStepInfo.step.targetValueLow;
+                        if (nextTargetHigh > 1000){
+                            nextTargetHigh = nextTargetHigh - 1000;
+                        }
+                        else if (nextTargetHigh > 10) {
+                            nextTargetHigh = nextTargetHigh;
+                        }
+                        else if (nextTargetHigh > 0) {
+                        }
+                        else {
+                            nextTargetHigh = 0;
+                        }
+                        if (nextTargetLow> 1000){
+                            nextTargetLow = nextTargetLow - 1000;
+                        }
+                        else if (nextTargetLow > 10){
+                            nextTargetLow = nextTargetLow;
+                        }
+                        else if (nextTargetLow > 0){
+                            if (UserProfile has :getCurrentSport) {
+                            var sport = UserProfile.getCurrentSport();
+                            if (UserProfile has :getHeartRateZones){
+                                var heartRateZones = UserProfile.getHeartRateZones(sport);
+                                if (nextWorkoutStepInfo.step.targetValueLow != null){
+                                    nextLow = nextWorkoutStepInfo.step.targetValueLow; 
+                                    if (nextLow > 0 and nextLow < 6){
+                                        nextTargetLow = heartRateZones[nextLow - 1];
+                                        nextTargetHigh = heartRateZones[nextLow];
+                                    }
+                                    else {
+                                        nextTargetLow = nextWorkoutStepInfo.step.targetValueLow;
+                                        nextTargetHigh = nextWorkoutStepInfo.step.targetValueHigh;
+                                    }
+                                }    
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        else {
+            nextTargetLow = 0;
+            nextTargetHigh = 0;
+        }
     }
+    }
+    
     
     function onWorkoutStarted() as Void {
         myCounter = 0;
@@ -186,33 +233,60 @@ class timerView extends WatchUi.DataField {
         return timeString;
     }
 
-    // This will be called once a second when the data field is visible.
-    function onUpdate(dc as Dc) as Void {
-    
-        // Set the background color
-        (View.findDrawableById("Background") as Text).setColor(getBackgroundColor());
 
-        // Set the foreground color and value, added the label in same color
-        var value = View.findDrawableById("value") as Text;
-        var label = View.findDrawableById("label") as Text;
-        if (getBackgroundColor() == Graphics.COLOR_BLACK) {
-            value.setColor(Graphics.COLOR_WHITE);
-            label.setColor(Graphics.COLOR_WHITE);
+    function setfillColor() { 
+        if (nextTargetLow < targetLow) {
+            return Graphics.COLOR_RED;
+        }
+        else {
+            return Graphics.COLOR_GREEN;
+        }
+    }
+    
+
+    function onUpdate(dc) {
+        var width = dc.getWidth();
+        var height = dc.getHeight();
+        var textCenter = Toybox.Graphics.TEXT_JUSTIFY_CENTER | Toybox.Graphics.TEXT_JUSTIFY_VCENTER;
+        var backgroundColor = getBackgroundColor();
+        var highLowString = Lang.format("$1$ - $2$", [targetLow, targetHigh]);
+        value = secondsToTimeString(countDown);
+    
+        // set background color
+        dc.setColor(Graphics.COLOR_TRANSPARENT, backgroundColor);
+        
+        // set the label as target info if available.
+        if (targetLow == 0) {
+            label = "workout timer";
+        }
+        else {
+            label = highLowString;
+        }
+        // do layout, first clean background effect just to be sure
+        dc.setColor(backgroundColor, Graphics.COLOR_TRANSPARENT);
+        dc.fillRectangle (0, 0, width, height);
+        // set background effect color, just before its starts
+        if (_dur > 0 && countDown == 13){
+            populateValues();
+        }
+        else if (_dur > 0 && countDown == 12){
+            fillColor = setfillColor();
+        }
+        // then let it roll
+        else if (_dur > 0 && countDown < 11){
+            dc.setColor(fillColor, Graphics.COLOR_TRANSPARENT);
+            dc.fillRectangle (2, 2, (width * (10 - countDown)/9) - 4, height - 4);
+        }
+
+        // set foreground color
+        if (backgroundColor ==  Graphics.COLOR_BLACK) {
+            dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);    
         } 
         else {
-            value.setColor(Graphics.COLOR_BLACK);
-            label.setColor(Graphics.COLOR_BLACK);
+            dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_TRANSPARENT);
         }
-           
-        var highLowString = Lang.format("$1$ - $2$", [targetLow, targetHigh]);
-        value.setText(secondsToTimeString(countDown));
-        if (targetLow == 0){
-            (View.findDrawableById("label") as Text).setText(Rez.Strings.label);
-        }
-        else {
-            (View.findDrawableById("label") as Text).setText(highLowString);
-        }
-        // Call parent's onUpdate(dc) to redraw the layout
-        View.onUpdate(dc);
+        // write the text in foreground color
+        dc.drawText(width / 2, height / 2 - 21, Toybox.Graphics.FONT_MEDIUM, label, textCenter);
+        dc.drawText(width / 2, height / 2 + 11, Toybox.Graphics.FONT_LARGE, value, textCenter);   
     }
 }
