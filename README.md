@@ -10,6 +10,13 @@ Supported targets:
 * Cadence high and low value
 * During interval without set targets it will display 'workout timer'
 
+Feature:
+
+'Sufferfest-like' background effect: background fills the last 10 seconds of interval duration:
+
+* red: if next lap is easier
+* green: indicates harder lap coming up.
+
 ![example](./images/hero-small.png "example of workout timer")
 
 ## Installation
