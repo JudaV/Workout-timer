@@ -154,7 +154,7 @@ class timerView extends WatchUi.DataField {
                 targetHigh = 0;
             }
         }
-        // repeat for nextStepInfo 
+        // repeat for nextStepInfo - if-else nightmare
         if (Activity has :getNextWorkoutStep) {
             nextWorkoutStepInfo = Activity.getNextWorkoutStep();
             if (nextWorkoutStepInfo != null){
@@ -233,7 +233,7 @@ class timerView extends WatchUi.DataField {
         return timeString;
     }
 
-
+    (:regularVersion)
     function setfillColor() { 
         if (nextTargetLow < targetLow) {
             return Graphics.COLOR_RED;
@@ -241,6 +241,11 @@ class timerView extends WatchUi.DataField {
         else {
             return Graphics.COLOR_GREEN;
         }
+    }
+
+    (:edge130plusVersion)
+    function setfillColor(){
+        return Graphics.COLOR_TRANSPARENT;
     }
     
 
@@ -265,10 +270,11 @@ class timerView extends WatchUi.DataField {
         // do layout, first clean background effect just to be sure
         dc.setColor(backgroundColor, Graphics.COLOR_TRANSPARENT);
         dc.fillRectangle (0, 0, width, height);
-        // set background effect color, just before its starts
+        // check values before background effect
         if (_dur > 0 && countDown == 13){
             populateValues();
         }
+        // set background effect color, just before its starts
         else if (_dur > 0 && countDown == 12){
             fillColor = setfillColor();
         }
