@@ -108,6 +108,10 @@ class timerView extends WatchUi.DataField {
                         if (targetHigh > 1000){
                             targetHigh = targetHigh - 1000;
                         }
+                        // custom Heart rates are respresented as bpm + 100
+                        else if (targetHigh > 150){
+                            targetHigh = targetHigh - 100
+                        }
                         else if (targetHigh > 7) {
                             targetHigh = targetHigh;
                         } 
@@ -119,6 +123,9 @@ class timerView extends WatchUi.DataField {
                         // power zones but we can not reach this through the Toybox API.
                         if (targetLow > 1000){
                             targetLow = targetLow - 1000;
+                        }
+                        else if (targetLow > 150){
+                            targetLow = targetLow - 100
                         }
                         else if (targetLow > 7){
                             targetLow = targetLow;
@@ -165,6 +172,9 @@ class timerView extends WatchUi.DataField {
                         if (nextTargetHigh > 1000){
                             nextTargetHigh = nextTargetHigh - 1000;
                         }
+                        else if (nextTargetHigh > 150){
+                            nextTargetHigh = nextTargetHigh - 100
+                        }
                         else if (nextTargetHigh > 10) {
                             nextTargetHigh = nextTargetHigh;
                         }
@@ -173,8 +183,11 @@ class timerView extends WatchUi.DataField {
                         else {
                             nextTargetHigh = 0;
                         }
-                        if (nextTargetLow> 1000){
+                        if (nextTargetLow > 1000){
                             nextTargetLow = nextTargetLow - 1000;
+                        }
+                        else if (nextTargetLow > 150){
+                            nextTargetLow = nextTargetLow - 100
                         }
                         else if (nextTargetLow > 10){
                             nextTargetLow = nextTargetLow;
