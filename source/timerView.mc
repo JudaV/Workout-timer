@@ -110,7 +110,7 @@ class timerView extends WatchUi.DataField {
                         }
                         // custom Heart rates are respresented as bpm + 100
                         else if (targetHigh > 150){
-                            targetHigh = targetHigh - 100
+                            targetHigh = targetHigh - 100;
                         }
                         else if (targetHigh > 7) {
                             targetHigh = targetHigh;
@@ -125,7 +125,7 @@ class timerView extends WatchUi.DataField {
                             targetLow = targetLow - 1000;
                         }
                         else if (targetLow > 150){
-                            targetLow = targetLow - 100
+                            targetLow = targetLow - 100;
                         }
                         else if (targetLow > 7){
                             targetLow = targetLow;
@@ -173,7 +173,7 @@ class timerView extends WatchUi.DataField {
                             nextTargetHigh = nextTargetHigh - 1000;
                         }
                         else if (nextTargetHigh > 150){
-                            nextTargetHigh = nextTargetHigh - 100
+                            nextTargetHigh = nextTargetHigh - 100;
                         }
                         else if (nextTargetHigh > 10) {
                             nextTargetHigh = nextTargetHigh;
@@ -187,7 +187,7 @@ class timerView extends WatchUi.DataField {
                             nextTargetLow = nextTargetLow - 1000;
                         }
                         else if (nextTargetLow > 150){
-                            nextTargetLow = nextTargetLow - 100
+                            nextTargetLow = nextTargetLow - 100;
                         }
                         else if (nextTargetLow > 10){
                             nextTargetLow = nextTargetLow;
