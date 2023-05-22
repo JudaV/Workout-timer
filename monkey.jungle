@@ -1,4 +1,5 @@
 project.manifest = manifest.xml
 base.excludeAnnotations = edge130plusVersion
 edge130plus.excludeAnnotations = regularVersion
+project.typecheck = 0
 
