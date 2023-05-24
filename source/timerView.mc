@@ -228,20 +228,18 @@ class timerView extends WatchUi.DataField {
         if (checkStepInfo(thisOrNextStepinfo) && thisOrNextStepinfo.step.targetValueLow != null ){
             tHigh = correctTargets(thisOrNextStepinfo.step.targetValueHigh);
             tLow = correctTargets(thisOrNextStepinfo.step.targetValueLow);
-            
+
             // heart rate zone == targetValueLow :rolling_eyes:
-            if (tLow > 0 and tLow < 6 ) {
+            low = thisOrNextStepinfo.step.targetValueLow;
+            if (low > 0 and low < 6 ) {
                 if (UserProfile has :getCurrentSport) {
                     var sport = UserProfile.getCurrentSport();
                     if (UserProfile has :getHeartRateZones){
                         var heartRateZones = UserProfile.getHeartRateZones(sport);
-                        low = thisOrNextStepinfo.step.targetValueLow; 
-                        if (low > 0 and low < 6){
-                            tLow = heartRateZones[low - 1];
-                            tHigh = heartRateZones[low];
-                        }                                      
-                    } 
-                }
+                        tLow = heartRateZones[low - 1];
+                        tHigh = heartRateZones[low];
+                    }                                      
+                } 
             }    
         }
         return [tLow, tHigh] as Array<Number>;
