@@ -93,7 +93,7 @@ class timerView extends WatchUi.DataField {
         if (Activity has :getCurrentWorkoutStep) {
             workoutStepInfo = Activity.getCurrentWorkoutStep();
             if (workoutStepInfo != null) {
-                if (workoutStepInfo has : step) {
+                if (workoutStepInfo has :step) {
                     if (workoutStepInfo.step instanceof Activity.WorkoutStep){
                         targetHigh = workoutStepInfo.step.targetValueHigh;
                         targetLow = workoutStepInfo.step.targetValueLow;
@@ -165,7 +165,7 @@ class timerView extends WatchUi.DataField {
         if (Activity has :getNextWorkoutStep) {
             nextWorkoutStepInfo = Activity.getNextWorkoutStep();
             if (nextWorkoutStepInfo != null){
-                if (nextWorkoutStepInfo has : step) {
+                if (nextWorkoutStepInfo has :step) {
                     if (nextWorkoutStepInfo.step instanceof Activity.WorkoutStep) {
                         nextTargetHigh = nextWorkoutStepInfo.step.targetValueHigh;
                         nextTargetLow = nextWorkoutStepInfo.step.targetValueLow;
