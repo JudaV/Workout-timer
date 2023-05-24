@@ -15,8 +15,10 @@ class timerView extends WatchUi.DataField {
     hidden var nextTargetHigh;
     hidden var nextTargetLow;
     hidden var label;
-    hidden var value;
     hidden var fillColor;
+    hidden var currentTargets as Array<Number> = new Array<Number>[2];
+    hidden var nextTargets as Array<Number> = new Array<Number>[2];
+    
     
     function initialize() {
         DataField.initialize();
@@ -28,9 +30,10 @@ class timerView extends WatchUi.DataField {
         targetLow = 0;
         nextTargetHigh = 0;
         nextTargetLow = 0;
-        value = 0;
         label = "workout timer";
         fillColor = Graphics.COLOR_TRANSPARENT;
+        currentTargets = [] as Array<Number>;
+        nextTargets = [] as Array<Number>;
     }
     
     // The given info object contains all the current workout information.
@@ -85,140 +88,31 @@ class timerView extends WatchUi.DataField {
     }
 
     function populateValues() as Void {
-        var low = 0;
-        var nextLow = 0;
         var workoutStepInfo;
         var nextWorkoutStepInfo;
     
         if (Activity has :getCurrentWorkoutStep) {
             workoutStepInfo = Activity.getCurrentWorkoutStep();
-            if (workoutStepInfo != null) {
-                if (workoutStepInfo has :step) {
-                    if (workoutStepInfo.step instanceof Activity.WorkoutStep){
-                        targetHigh = workoutStepInfo.step.targetValueHigh;
-                        targetLow = workoutStepInfo.step.targetValueLow;
-                        // set the duration of the workout steps
-                        if (workoutStepInfo.step.durationValue != null){
-                            _dur = workoutStepInfo.step.durationValue; 
-                        }
-                        else {
-                            _dur = 0;
-                        }
-                        // power targets in workout .fit files are represented as power-in-watts + 1000
-                        if (targetHigh > 1000){
-                            targetHigh = targetHigh - 1000;
-                        }
-                        // custom Heart rates are respresented as bpm + 100
-                        else if (targetHigh > 150){
-                            targetHigh = targetHigh - 100;
-                        }
-                        else if (targetHigh > 7) {
-                            targetHigh = targetHigh;
-                        } 
-                        else {
-                            targetHigh = 0;
-                        }
-
-                        // it seems that if target type = 7 workoutStepInfo.step.targetValueLow is used for 
-                        // power zones but we can not reach this through the Toybox API.
-                        if (targetLow > 1000){
-                            targetLow = targetLow - 1000;
-                        }
-                        else if (targetLow > 150){
-                            targetLow = targetLow - 100;
-                        }
-                        else if (targetLow > 7){
-                            targetLow = targetLow;
-                        }
-                        // heart rate zone == targetValueLow :rolling_eyes:
-                        else if (targetLow > 0 and targetLow < 6 ) {
-                            if (UserProfile has :getCurrentSport) {
-                                var sport = UserProfile.getCurrentSport();
-                                if (UserProfile has :getHeartRateZones){
-                                    var heartRateZones = UserProfile.getHeartRateZones(sport);
-                                    if (workoutStepInfo.step.targetValueLow != null){
-                                        low = workoutStepInfo.step.targetValueLow; 
-                                        if (low > 0 and low < 6){
-                                            targetLow = heartRateZones[low - 1];
-                                            targetHigh = heartRateZones[low];
-                                        }
-                                        else {
-                                            targetLow = workoutStepInfo.step.targetValueLow;
-                                            targetHigh = workoutStepInfo.step.targetValueHigh;
-                                        }
-                                    }
-                                } 
-                            }
-                        }
-                        else {
-                            targetLow = 0;
-                        }
-                    }
-                }
+            _dur = getDuration(workoutStepInfo);
+            currentTargets = processStepInfo(workoutStepInfo);
+            if (targetLow != null){
+                targetLow = currentTargets[0];
             }
-            else {
-                targetLow = 0;
-                targetHigh = 0;
-            }
+            if (targetHigh !=null){
+                targetHigh = currentTargets[1];
+            }          
         }
-        // repeat for nextStepInfo - if-else nightmare
+        // repeat for nextStepInfo
         if (Activity has :getNextWorkoutStep) {
             nextWorkoutStepInfo = Activity.getNextWorkoutStep();
-            if (nextWorkoutStepInfo != null){
-                if (nextWorkoutStepInfo has :step) {
-                    if (nextWorkoutStepInfo.step instanceof Activity.WorkoutStep) {
-                        nextTargetHigh = nextWorkoutStepInfo.step.targetValueHigh;
-                        nextTargetLow = nextWorkoutStepInfo.step.targetValueLow;
-                        if (nextTargetHigh > 1000){
-                            nextTargetHigh = nextTargetHigh - 1000;
-                        }
-                        else if (nextTargetHigh > 150){
-                            nextTargetHigh = nextTargetHigh - 100;
-                        }
-                        else if (nextTargetHigh > 10) {
-                            nextTargetHigh = nextTargetHigh;
-                        }
-                        else if (nextTargetHigh > 0) {
-                        }
-                        else {
-                            nextTargetHigh = 0;
-                        }
-                        if (nextTargetLow > 1000){
-                            nextTargetLow = nextTargetLow - 1000;
-                        }
-                        else if (nextTargetLow > 150){
-                            nextTargetLow = nextTargetLow - 100;
-                        }
-                        else if (nextTargetLow > 10){
-                            nextTargetLow = nextTargetLow;
-                        }
-                        else if (nextTargetLow > 0){
-                            if (UserProfile has :getCurrentSport) {
-                            var sport = UserProfile.getCurrentSport();
-                            if (UserProfile has :getHeartRateZones){
-                                var heartRateZones = UserProfile.getHeartRateZones(sport);
-                                if (nextWorkoutStepInfo.step.targetValueLow != null){
-                                    nextLow = nextWorkoutStepInfo.step.targetValueLow; 
-                                    if (nextLow > 0 and nextLow < 6){
-                                        nextTargetLow = heartRateZones[nextLow - 1];
-                                        nextTargetHigh = heartRateZones[nextLow];
-                                    }
-                                    else {
-                                        nextTargetLow = nextWorkoutStepInfo.step.targetValueLow;
-                                        nextTargetHigh = nextWorkoutStepInfo.step.targetValueHigh;
-                                    }
-                                }    
-                            }
-                        }
-                    }
-                }
+            nextTargets = processStepInfo(nextWorkoutStepInfo);
+            if (nextTargetLow != null){
+                nextTargetLow = nextTargets[0];
+            }
+            if (nextTargetHigh != null){
+                nextTargetHigh = nextTargets[1];
             }
         }
-        else {
-            nextTargetLow = 0;
-            nextTargetHigh = 0;
-        }
-    }
     }
     
     
@@ -268,7 +162,7 @@ class timerView extends WatchUi.DataField {
         var textCenter = Toybox.Graphics.TEXT_JUSTIFY_CENTER | Toybox.Graphics.TEXT_JUSTIFY_VCENTER;
         var backgroundColor = getBackgroundColor();
         var highLowString = Lang.format("$1$ - $2$", [targetLow, targetHigh]);
-        value = secondsToTimeString(countDown);
+        var value = secondsToTimeString(countDown);
     
         // set background color
         dc.setColor(Graphics.COLOR_TRANSPARENT, backgroundColor);
@@ -308,4 +202,82 @@ class timerView extends WatchUi.DataField {
         dc.drawText(width / 2, height / 2 - 21, Toybox.Graphics.FONT_MEDIUM, label, textCenter);
         dc.drawText(width / 2, height / 2 + 11, Toybox.Graphics.FONT_LARGE, value, textCenter);   
     }
-}
+
+
+    function correctTargets(target) as Number {
+        // custom power values are represented in .fit files as power + 1000W
+        if (target > 1000){
+            return target - 1000;
+        }
+        // custom Heart rates are respresented as bpm + 100
+        if (target > 150){
+            return target - 100;
+        }
+        if (target > 0) {
+            return target;
+        } 
+        else {
+            return 0;
+        }
+    }
+
+    function processStepInfo(thisOrNextStepinfo){
+        var low = 0;
+        var tHigh = 0;
+        var tLow = 0;
+        if (checkStepInfo(thisOrNextStepinfo) && thisOrNextStepinfo.step.targetValueLow != null ){
+            tHigh = correctTargets(thisOrNextStepinfo.step.targetValueHigh);
+            tLow = correctTargets(thisOrNextStepinfo.step.targetValueLow);
+            
+            // heart rate zone == targetValueLow :rolling_eyes:
+            if (tLow > 0 and tLow < 6 ) {
+                if (UserProfile has :getCurrentSport) {
+                    var sport = UserProfile.getCurrentSport();
+                    if (UserProfile has :getHeartRateZones){
+                        var heartRateZones = UserProfile.getHeartRateZones(sport);
+                        low = thisOrNextStepinfo.step.targetValueLow; 
+                        if (low > 0 and low < 6){
+                            tLow = heartRateZones[low - 1];
+                            tHigh = heartRateZones[low];
+                        }                                      
+                    } 
+                }
+            }    
+        }
+        return [tLow, tHigh] as Array<Number>;
+    }
+
+
+    function getDuration(workoutStepInfo) as Number {
+        // set the duration of the workout steps
+        if (!(checkStepInfo(workoutStepInfo))) {
+            return 0;
+        } 
+        if (workoutStepInfo.step.durationValue == null){
+            return 0;
+        }
+        // check for durationType is time (with value 0)
+        if (workoutStepInfo.step.durationType != 0){
+            return 0;
+        }
+        else {
+            return workoutStepInfo.step.durationValue;
+        }
+    }
+
+    function checkStepInfo(stepInfo) as Boolean {
+        if (stepInfo == null){
+            return false;
+        }
+        if (!(stepInfo has :step)){
+            return false;
+        }
+        if (!(stepInfo.step instanceof Activity.WorkoutStep)){
+            return false;
+        }
+        else {
+            return true;
+        }
+    }
+
+} 
