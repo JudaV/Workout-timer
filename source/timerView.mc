@@ -15,9 +15,7 @@ class timerView extends WatchUi.DataField {
     hidden var nextTargetHigh;
     hidden var nextTargetLow;
     hidden var label;
-    hidden var value;
     hidden var fillColor;
-    hidden var checkStep;
     hidden var currentTargets as Array<Number> = new Array<Number>[2];
     hidden var nextTargets as Array<Number> = new Array<Number>[2];
     
@@ -32,10 +30,8 @@ class timerView extends WatchUi.DataField {
         targetLow = 0;
         nextTargetHigh = 0;
         nextTargetLow = 0;
-        value = 0;
         label = "workout timer";
         fillColor = Graphics.COLOR_TRANSPARENT;
-        checkStep = false;
         currentTargets = [] as Array<Number>;
         nextTargets = [] as Array<Number>;
     }
@@ -166,7 +162,7 @@ class timerView extends WatchUi.DataField {
         var textCenter = Toybox.Graphics.TEXT_JUSTIFY_CENTER | Toybox.Graphics.TEXT_JUSTIFY_VCENTER;
         var backgroundColor = getBackgroundColor();
         var highLowString = Lang.format("$1$ - $2$", [targetLow, targetHigh]);
-        value = secondsToTimeString(countDown);
+        var value = secondsToTimeString(countDown);
     
         // set background color
         dc.setColor(Graphics.COLOR_TRANSPARENT, backgroundColor);
@@ -229,8 +225,7 @@ class timerView extends WatchUi.DataField {
         var low = 0;
         var tHigh = 0;
         var tLow = 0;
-        var tTargets = new Array<Number>[2];
-        if (checkStepInfo(thisOrNextStepinfo) == true && thisOrNextStepinfo.step.targetValueLow != null ){
+        if (checkStepInfo(thisOrNextStepinfo) && thisOrNextStepinfo.step.targetValueLow != null ){
             tHigh = correctTargets(thisOrNextStepinfo.step.targetValueHigh);
             tLow = correctTargets(thisOrNextStepinfo.step.targetValueLow);
             
@@ -241,29 +236,25 @@ class timerView extends WatchUi.DataField {
                     if (UserProfile has :getHeartRateZones){
                         var heartRateZones = UserProfile.getHeartRateZones(sport);
                         low = thisOrNextStepinfo.step.targetValueLow; 
-                        if (low > 0 and low < 6){
-                            tLow = heartRateZones[low - 1];
-                            tHigh = heartRateZones[low];
-                        }                     
+                        tLow = heartRateZones[low - 1];
+                        tHigh = heartRateZones[low];                                            
                     } 
                 }
             }    
         }
-        tTargets = [tLow, tHigh] as Array<Number>;
-        return tTargets;
+        return [tLow, tHigh] as Array<Number>;
     }
 
 
     function getDuration(workoutStepInfo) as Number {
         // set the duration of the workout steps
-        checkStep = checkStepInfo(workoutStepInfo);
-        if (checkStep == false) {
+        if (!(checkStepInfo(workoutStepInfo))) {
             return 0;
         } 
         if (workoutStepInfo.step.durationValue == null){
             return 0;
         }
-        // check for durationType is time
+        // check for durationType is time (with value 0)
         if (workoutStepInfo.step.durationType != 0){
             return 0;
         }
