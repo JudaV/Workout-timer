@@ -18,8 +18,9 @@ class timerView extends WatchUi.DataField {
     hidden var value;
     hidden var fillColor;
     hidden var checkStep;
-    hidden var currentTargets = new Array<Number>[2];
-    hidden var nextTargets = new Array<Number>[2];
+    hidden var currentTargets as Array<Number> = new Array<Number>[2];
+    hidden var nextTargets as Array<Number> = new Array<Number>[2];
+    
     
     function initialize() {
         DataField.initialize();
@@ -35,8 +36,8 @@ class timerView extends WatchUi.DataField {
         label = "workout timer";
         fillColor = Graphics.COLOR_TRANSPARENT;
         checkStep = false;
-        currentTargets = [targetLow, targetHigh] as Array<Number>;
-        nextTargets = [nextTargetLow, nextTargetHigh] as Array<Number>;
+        currentTargets = [] as Array<Number>;
+        nextTargets = [] as Array<Number>;
     }
     
     // The given info object contains all the current workout information.
@@ -98,15 +99,23 @@ class timerView extends WatchUi.DataField {
             workoutStepInfo = Activity.getCurrentWorkoutStep();
             _dur = getDuration(workoutStepInfo);
             currentTargets = processStepInfo(workoutStepInfo);
-            targetLow = currentTargets[0];
-            targetHigh = currentTargets[1];
+            if (targetLow != null){
+                targetLow = currentTargets[0];
+            }
+            if (targetHigh !=null){
+                targetHigh = currentTargets[1];
+            }          
         }
         // repeat for nextStepInfo
         if (Activity has :getNextWorkoutStep) {
             nextWorkoutStepInfo = Activity.getNextWorkoutStep();
             nextTargets = processStepInfo(nextWorkoutStepInfo);
-            nextTargetLow = nextTargets[0];
-            nextTargetHigh = nextTargets[1];
+            if (nextTargetLow != null){
+                nextTargetLow = nextTargets[0];
+            }
+            if (nextTargetHigh != null){
+                nextTargetHigh = nextTargets[1];
+            }
         }
     }
     
@@ -199,7 +208,7 @@ class timerView extends WatchUi.DataField {
     }
 
 
-    function correctTargets(target){
+    function correctTargets(target) as Number {
         // custom power values are represented in .fit files as power + 1000W
         if (target > 1000){
             return target - 1000;
@@ -222,25 +231,11 @@ class timerView extends WatchUi.DataField {
         var tLow = 0;
         var tTargets = new Array<Number>[2];
         if (checkStepInfo(thisOrNextStepinfo) == true && thisOrNextStepinfo.step.targetValueLow != null ){
-
-            tHigh = thisOrNextStepinfo.step.targetValueHigh;
-            tLow = thisOrNextStepinfo.step.targetValueLow;
+            tHigh = correctTargets(thisOrNextStepinfo.step.targetValueHigh);
+            tLow = correctTargets(thisOrNextStepinfo.step.targetValueLow);
             
-            tHigh = correctTargets(tHigh);
-
-            // it seems that if target type = 7 workoutStepInfo.step.targetValueLow is used for 
-            // power zones but we can not reach this through the Toybox API.
-            if (tLow > 1000){
-                tLow = tLow - 1000;
-            }
-            else if (tLow > 150){
-                tLow = tLow - 100;
-            }
-            else if (tLow > 7){
-                tLow = tLow;
-            }
             // heart rate zone == targetValueLow :rolling_eyes:
-            else if (tLow > 0 and tLow < 6 ) {
+            if (tLow > 0 and tLow < 6 ) {
                 if (UserProfile has :getCurrentSport) {
                     var sport = UserProfile.getCurrentSport();
                     if (UserProfile has :getHeartRateZones){
@@ -249,26 +244,17 @@ class timerView extends WatchUi.DataField {
                         if (low > 0 and low < 6){
                             tLow = heartRateZones[low - 1];
                             tHigh = heartRateZones[low];
-                        }
-                        else {
-                            tLow = thisOrNextStepinfo.step.targetValueLow;
-                            tHigh = thisOrNextStepinfo.step.targetValueHigh;
-                        }                      
+                        }                     
                     } 
                 }
             }    
         }
-        else {
-            tLow = 0;
-            tHigh = 0;
-        }
         tTargets = [tLow, tHigh] as Array<Number>;
-        System.println(tTargets);
         return tTargets;
     }
 
 
-    function getDuration(workoutStepInfo){
+    function getDuration(workoutStepInfo) as Number {
         // set the duration of the workout steps
         checkStep = checkStepInfo(workoutStepInfo);
         if (checkStep == false) {
@@ -277,12 +263,16 @@ class timerView extends WatchUi.DataField {
         if (workoutStepInfo.step.durationValue == null){
             return 0;
         }
+        // check for durationType is time
+        if (workoutStepInfo.step.durationType != 0){
+            return 0;
+        }
         else {
             return workoutStepInfo.step.durationValue;
         }
     }
 
-    function checkStepInfo(stepInfo){
+    function checkStepInfo(stepInfo) as Boolean {
         if (stepInfo == null){
             return false;
         }
