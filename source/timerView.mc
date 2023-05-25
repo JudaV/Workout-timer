@@ -93,24 +93,37 @@ class timerView extends WatchUi.DataField {
     
         if (Activity has :getCurrentWorkoutStep) {
             workoutStepInfo = Activity.getCurrentWorkoutStep();
-            _dur = getDuration(workoutStepInfo);
-            currentTargets = processStepInfo(workoutStepInfo);
-            if (targetLow != null){
-                targetLow = currentTargets[0];
+            if (workoutStepInfo == null){
+                _dur = 0;
+                targetLow = 0;
+                targetHigh = 0;
             }
-            if (targetHigh !=null){
-                targetHigh = currentTargets[1];
-            }          
+            else {
+                _dur = getDuration(workoutStepInfo);
+                currentTargets = processStepInfo(workoutStepInfo);
+                if (targetLow != null){
+                    targetLow = currentTargets[0];
+                }
+                if (targetHigh !=null){
+                    targetHigh = currentTargets[1];
+                }
+            }              
         }
         // repeat for nextStepInfo
         if (Activity has :getNextWorkoutStep) {
             nextWorkoutStepInfo = Activity.getNextWorkoutStep();
-            nextTargets = processStepInfo(nextWorkoutStepInfo);
-            if (nextTargetLow != null){
-                nextTargetLow = nextTargets[0];
+            if (nextWorkoutStepInfo == null){
+                nextTargetLow = 0;
+                nextTargetHigh = 0;
             }
-            if (nextTargetHigh != null){
-                nextTargetHigh = nextTargets[1];
+            else {
+                nextTargets = processStepInfo(nextWorkoutStepInfo);
+                if (nextTargetLow != null){
+                    nextTargetLow = nextTargets[0];
+                }
+                if (nextTargetHigh != null){
+                    nextTargetHigh = nextTargets[1];
+                }
             }
         }
     }
