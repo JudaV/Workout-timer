@@ -264,13 +264,13 @@ class timerView extends WatchUi.DataField {
     }
 
     function checkStepInfo(stepInfo) as Boolean {
-        if (stepInfo == null){
-            return false;
-        }
         if (!(stepInfo has :step)){
             return false;
         }
         if (!(stepInfo.step instanceof Activity.WorkoutStep)){
+            return false;
+        }
+        if (stepInfo == null){
             return false;
         }
         else {
