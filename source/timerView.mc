@@ -267,8 +267,8 @@ class timerView extends WatchUi.DataField {
         if (workoutStepInfo.step.durationValue == null){
             return 0;
         }
-        // check for durationType is time (with value 0)
-        if (workoutStepInfo.step.durationType != 0){
+        // check for durationType is time (with value 0) or open (value 5)
+        if (workoutStepInfo.step.durationType != (0 or 5)){
             return 0;
         }
         else {
