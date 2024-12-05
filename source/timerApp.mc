@@ -15,10 +15,10 @@ class timerApp extends Application.AppBase {
     // onStop() is called when your application is exiting
     function onStop(state as Dictionary?) as Void {
     }
-
-    //! Return the initial view of your application here
-    function getInitialView() as Array<Views or InputDelegates>? {
-        return [ new timerView() ] as Array<Views or InputDelegates>;
+    
+    // Return the initial view of your application here
+    public function getInitialView() as [Views] or [Views, InputDelegates] {
+        return [ new timerView() ];
     }
 
 }
