@@ -18,6 +18,8 @@ class timerView extends WatchUi.DataField {
     hidden var fillColor;
     hidden var currentTargets as Array<Number> = new Array<Number>[2];
     hidden var nextTargets as Array<Number> = new Array<Number>[2];
+    hidden var labelVertical;
+    hidden var valueVertical;
     
     
     function initialize() {
@@ -34,6 +36,8 @@ class timerView extends WatchUi.DataField {
         fillColor = Graphics.COLOR_TRANSPARENT;
         currentTargets = [] as Array<Number>;
         nextTargets = [] as Array<Number>;
+        labelVertical  = -21;
+        valueVertical = 0;
     }
     
     // The given info object contains all the current workout information.
@@ -54,9 +58,11 @@ class timerView extends WatchUi.DataField {
             myCounter++;
         }
         // reset after workout ends 
-        if (Activity.getCurrentWorkoutStep() == null){
-            targetLow = 0;
-            _dur = 0;
+        if (Activity has :getCurrentWorkoutStep) {
+            if (Activity.getCurrentWorkoutStep() == null){
+                targetLow = 0;
+                _dur = 0;
+            }
         }
     }
 
@@ -162,20 +168,68 @@ class timerView extends WatchUi.DataField {
             return Graphics.COLOR_GREEN;
         }
     }
+    (:regularVersion)
+    function setVerticalValues(){
+        labelVertical = -21;
+        valueVertical = 0;
+        return;
+    }
 
     (:edge130plusVersion)
     function setfillColor(){
         return Graphics.COLOR_TRANSPARENT;
     }
+
+    (:edge130plusVersion)
+    function setVerticalValues(){
+        labelVertical = -42;
+        valueVertical = -10;
+        return;
+    }
+
+    (:edge1050Version)
+    function setfillColor() { 
+       if (nextTargetLow < targetLow) {
+        return Graphics.COLOR_RED;
+        }
+        else {
+            return Graphics.COLOR_GREEN;
+        }
+    }
     
+    (:edge1050Version)
+    function setVerticalValues(){
+        labelVertical = -62;
+        valueVertical = -1;
+        return;
+    }
+
+    (:edge1030Version)
+    function setVerticalValues(){
+        labelVertical = -32;
+        valueVertical = -10;
+        return;
+    }
+
+    (:edge1030Version)
+    function setfillColor() { 
+        if (nextTargetLow < targetLow) {
+            return Graphics.COLOR_RED;
+        }
+        else {
+            return Graphics.COLOR_GREEN;
+        }
+    }
+
 
     function onUpdate(dc) {
         var width = dc.getWidth();
         var height = dc.getHeight();
-        var textCenter = Toybox.Graphics.TEXT_JUSTIFY_CENTER | Toybox.Graphics.TEXT_JUSTIFY_VCENTER;
+        var textCenter = Toybox.Graphics.TEXT_JUSTIFY_CENTER;
         var backgroundColor = getBackgroundColor();
         var highLowString = Lang.format("$1$ - $2$", [targetLow, targetHigh]);
         var value = secondsToTimeString(countDown);
+        setVerticalValues();
     
         // set background color
         dc.setColor(Graphics.COLOR_TRANSPARENT, backgroundColor);
@@ -212,8 +266,8 @@ class timerView extends WatchUi.DataField {
             dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_TRANSPARENT);
         }
         // write the text in foreground color
-        dc.drawText(width / 2, height / 2 - 21, Toybox.Graphics.FONT_MEDIUM, label, textCenter);
-        dc.drawText(width / 2, height / 2 + 11, Toybox.Graphics.FONT_LARGE, value, textCenter);   
+        dc.drawText(width / 2, (height / 2) + labelVertical, Toybox.Graphics.FONT_MEDIUM, label, textCenter);
+        dc.drawText(width / 2, (height / 2) + valueVertical, Toybox.Graphics.FONT_LARGE, value, textCenter);   
     }
 
 

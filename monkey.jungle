@@ -1,5 +1,8 @@
 project.manifest = manifest.xml
-base.excludeAnnotations = edge130plusVersion
-edge130plus.excludeAnnotations = regularVersion
-
-
+base.excludeAnnotations = edge130plusVersion;edge1050Version;edge1030Version
+edge130plus.excludeAnnotations = regularVersion;edge1050Version;edge1030Version
+edge1030.excludeAnnotations = regularVersion;edge1050Version;edge130plusVersion
+edge1030bontrager.excludeAnnotations = regularVersion;edge1050Version;edge130plusVersion
+edge530.excludeAnnotations = regularVersion;edge1050Version;edge130plusVersion
+edge830.excludeAnnotations = regularVersion;edge1050Version;edge130plusVersion
+edge1050.excludeAnnotations = regularVersion;edge130plusVersion;edge1030Version
